@@ -1,0 +1,286 @@
+---
+title: "test-data"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# packakages
+```{r, include=FALSE}
+install.packages("iriR")
+install.packages("tidyr")
+install.packages("dplyr")
+install.packages("readxl")
+install.packages("ggplot2")
+install.packages("ggthemes")
+install.packages("MASS")
+install.packages("stargazer")
+install.packages("gsheet")
+install.packages("gtsummary")
+```
+
+```{r, include=FALSE}
+library(iriR)
+library(tidyr)
+library(dplyr)
+library(readxl)
+library(ggplot2)
+library(ggthemes)
+library(MASS)
+library(stargazer)
+library(gsheet)
+library(gtsummary)
+```
+
+# data cleaning:
+
+```{r, include=FALSE}
+
+data_test2 <- irir_data(,indicators = "RD.intensity")
+data_test2$RD_intensity <- data_test2$value
+data_test2$indicator_code <- NULL
+data_test2$value <- NULL
+
+
+data_test3 <- irir_data(indicators = "capex.intensity")
+data_test3$capex_intensity <- data_test3$value
+
+
+data_test2$capex_intensity <- data_test3$capex_intensity
+
+excel <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1LvrUVtUihRWMHgDqLAJHVm7_VeAqWBEZ7d1I3nAwD8U/edit?usp=sharing")
+
+```
+
+
+```{r, include=FALSE}
+final_data <- data_test2
+
+final_filtered_data <- filter(final_data,year == "2019", rank < 31)
+final_filtered_data$geographical_loc <- excel$geografical_location
+final_filtered_data$indicator <- excel$Y_variable
+final_filtered_data$patents_2018 <- excel$pantents_2018 /1000
+
+final_filtered_data <- final_filtered_data %>% mutate(indicator = case_when(indicator == "top 10" ~ 2, indicator == "top 20" ~ 1, TRUE ~ 0))
+
+final_filtered_data$indicator <- as.ordered(final_filtered_data$indicator)
+
+
+
+```
+
+# data description:
+
+## R&D intensity:
+```{r}
+summary(final_filtered_data$RD_intensity)
+hist(final_filtered_data$RD_intensity)
+```
+## pantens in 2018:
+```{r}
+summary(final_filtered_data$patents_2018)
+hist(final_filtered_data$patents_2018)
+```
+
+
+
+# data visualization: 
+```{r}
+ggplot(data = final_filtered_data, aes(x = country_code, fill = country_code)) + 
+  geom_bar() +
+  xlab("") +
+  ylab("Number of company in the top 30")  +
+  labs(fill = "country code")  +  
+  theme_minimal() + 
+  scale_fill_brewer(direction = 1)
+```
+
+```{r}
+ggplot(data = final_filtered_data, aes(x = geographical_loc, fill = geographical_loc)) + 
+  geom_bar() +
+  xlab("") +
+  ylab("Number of company in the top 30")  +
+  labs(fill = "Geographical location")  +  
+  theme_minimal() + 
+  scale_fill_brewer(direction = 1)
+```
+
+```{r}
+ggplot(final_filtered_data, aes(x = indicator, y = RD_intensity))+ geom_boxplot(size = .75) +
+geom_jitter(alpha = .5)
+```
+
+
+# model opition A
+```{r}
+str(final_filtered_data)
+```
+
+
+```{r}
+ftable(xtabs(~ indicator + RD_intensity + patents_2018, data = final_filtered_data))
+```
+
+
+## model1 => indicator = r&d intensity + patent 2018
+```{r}
+model1 <- polr(as.factor(indicator) ~ RD_intensity + patents_2018, data = final_filtered_data, Hess=TRUE)
+
+summary(model1)
+
+```
+## model2 => indicator = (r&d intensity)**2 + patent 2018
+```{r}
+model2 <- polr(as.factor(indicator) ~ (RD_intensity)**2 + patents_2018, data = final_filtered_data, Hess=TRUE)
+
+summary(model2)
+```
+## model3 => indicator = r&d intensity + (patent 2018)**2
+```{r}
+model3 <- polr(as.factor(indicator) ~ RD_intensity + (patents_2018)**2, data = final_filtered_data, Hess=TRUE)
+
+summary(model3)
+```
+## model4 => indicator = r&d intensity * patent
+```{r}
+model4 <- polr(as.factor(indicator) ~ RD_intensity * patents_2018, data = final_filtered_data, Hess=TRUE)
+
+summary(model4)
+```
+
+# p-value
+```{r}
+table1 <- coef(summary(model1))
+p1 <- pnorm(abs(table1[, "t value"]), lower.tail = FALSE) * 2
+(table1 <- cbind(table1, "p value" = p1))
+```
+
+
+```{r}
+table2 <- coef(summary(model2))
+p2 <- pnorm(abs(table2[, "t value"]), lower.tail = FALSE) * 2
+(table2 <- cbind(table2, "p value" = p2))
+```
+
+```{r}
+table3 <- coef(summary(model3))
+p3 <- pnorm(abs(table3[, "t value"]), lower.tail = FALSE) * 2
+(table3 <- cbind(table3, "p value" = p3))
+```
+
+```{r}
+table4 <- coef(summary(model4))
+p4 <- pnorm(abs(table4[, "t value"]), lower.tail = FALSE) * 2
+(table4 <- cbind(table4, "p value" = p4))
+```
+
+# chi-square test
+
+```{r}
+anova(model1, model4, test="Chisq")
+```
+
+
+# odds
+```{r}
+exp(coef(model1))
+```
+## r&d intensity:
+For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied 0.94 times, holding constant all other variables.
+
+For every one unit decrease in R&D intensity, the odds of being in the lower rank (top 30 versus top 20 or top 10) is multiplied 0.94 times, holding constant all other variables.
+
+## pantent:
+For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 2.06 times, holding constant all other variables.
+
+For every one unit decrease in patent, the odds of being in the lower rank (top 30 versus top 20 or top 10) is multiplied 2.06 times, holding constant all other variables.
+
+```{r}
+exp(coef(model2))
+```
+## r&d intensity:
+For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied 0.94 times, holding constant all other variables.
+
+For every one unit decrease in R&D intensity, the odds of being in the lower rank (top 30 versus top 20 or top 10) is multiplied 0.94 times, holding constant all other variables.
+
+## pantent:
+For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 2.06 times, holding constant all other variables.
+
+For every one unit decrease in patent, the odds of being in the lower rank (top 30 versus top 20 or top 10) is multiplied 2.06 times, holding constant all other variables.
+
+
+```{r}
+exp(coef(model3))
+```
+## r&d intensity:
+For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied 0.94 times, holding constant all other variables.
+
+For every one unit decrease in R&D intensity, the odds of being in the lower rank (top 30 versus top 20 or top 10) is multiplied 0.94 times, holding constant all other variables.
+
+## pantent:
+For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 2.06 times, holding constant all other variables.
+
+For every one unit decrease in patent, the odds of being in the lower rank (top 30 versus top 20 or top 10) is multiplied 2.06 times, holding constant all other variables.
+
+
+```{r}
+exp(coef(model4))
+```
+## r&d intensity:
+For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied 0.93 times, holding constant all other variables.
+
+For every one unit decrease in R&D intensity, the odds of being in the lower rank (top 30 versus top 20 or top 10) is multiplied 0.93 times, holding constant all other variables.
+
+## pantent:
+For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 1.89 times, holding constant all other variables.
+
+For every one unit decrease in patent, the odds of being in the lower rank (top 30 versus top 20 or top 10) is multiplied 1.89 times, holding constant all other variables.
+
+## interaction:
+For every one unit increase in the interaction variable, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 1.007 times, holding constant all other variables.
+
+For every one unit decrease in the interaction variable, the odds of being in the lower rank (top 30 versus top 20 or top 10) is multiplied 1.007 times, holding constant all other variables.
+
+#result
+
+```{r}
+stargazer(model1, type = "html")
+```
+
+
+
+
+
+
+
+# data
+ For the purpose of our project, we decided to use the isiR package, which is a package available in R, as our primary database. The isiR package provide the ranking of the top innovative companies, according to the European Commission’s Industrial R&D Investment Scoreboard, in addition to other dimensions. Those dimension include:Country, Year, Company’s name, Industry and Indicator. The indicator variable provides information such as sales, number of employees, profits, R&D spending and more. The secondary source used for data was from IPO's report on the top 300 Organizations Granted U.S Patent in 2018.
+
+# Dataset processing
+
+ Since our project required very specific variable, it was necessary to perform some data 
+processing before thinking of building models. Starting with the isiR database. The first step was to create a dataset in R using the isiR package with Rank, company's name, industry, year and R&D intensity as variable. It was decided as a group to limit our dataset to 30 observations. therefore, the filter function ,from the dplyr package, was used to limit the rank variable to 30 and make the year equal to 2019. This filtering helps us identify for which company the number of patent granted is need. With this thought in mind, and second dataset was created in R with company's name and patent as variables. Unfortunately, we were not able to find the number of patents granted in 2018 for 7  of the companies. in order to fill those missing data, we took the mean of the remaining 23 companies patents.
+
+
+##table of variable and description
+
+Once both dataset were completed, we combined them into a finish dataset, which has rank in 2019, company's name, country code, industry, R&D intensity and number of patent granted in 2018 as demonstrate in the table above. For this project rank was determined as the dependent variable. Since the purpose of this project is to access whether R&D intensity and number of patents have a impact to the ranking, our models would mainly focus on those two as the sole independent variables. 
+
+
+# data analysis and visualization
+
+
+It was decided as a group to limit our dataset to 30 observations, meaning take the top 30 companies in 2019.
+The rank was determined as the dependent variables
+
+
+The dataset used for this project consist of 
+
+# models
+
+```{r}
+stargazer(final_filtered_data, type = "html")
+```
+
