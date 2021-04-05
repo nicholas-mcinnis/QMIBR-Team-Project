@@ -88,7 +88,7 @@ hist(final_filtered_data$patents_2018)
 
 # data visualization: 
 ```{r}
-ggplot(data = final_filtered_data, aes(x = country_code, fill = country_code)) + 
+ggplot(data = final_filtered_data, aes(x = country_name, fill = country_name)) + 
   geom_bar() +
   xlab("") +
   ylab("Number of company in the top 30")  +
@@ -126,55 +126,47 @@ ftable(xtabs(~ indicator + RD_intensity + patents_2018, data = final_filtered_da
 
 ## model1 => indicator = r&d intensity + patent 2018
 ```{r}
-model1 <- polr(as.factor(indicator) ~ RD_intensity + patents_2018, data = final_filtered_data, Hess=TRUE)
+model1 <- polr(indicator ~ RD_intensity + patents_2018, data = final_filtered_data, Hess=TRUE)
 
 summary(model1)
+table1 <- coef(summary(model1))
+p1 <- pnorm(abs(table1[, "t value"]), lower.tail = FALSE) * 2
+(table1 <- cbind(table1, "p value" = p1))
 
 ```
 ## model2 => indicator = (r&d intensity)**2 + patent 2018
 ```{r}
-model2 <- polr(as.factor(indicator) ~ (RD_intensity)**2 + patents_2018, data = final_filtered_data, Hess=TRUE)
+model2 <- polr(indicator ~ (RD_intensity)**2 + patents_2018, data = final_filtered_data, Hess=TRUE)
 
 summary(model2)
-```
-## model3 => indicator = r&d intensity + (patent 2018)**2
-```{r}
-model3 <- polr(as.factor(indicator) ~ RD_intensity + (patents_2018)**2, data = final_filtered_data, Hess=TRUE)
 
-summary(model3)
-```
-## model4 => indicator = r&d intensity * patent
-```{r}
-model4 <- polr(as.factor(indicator) ~ RD_intensity * patents_2018, data = final_filtered_data, Hess=TRUE)
-
-summary(model4)
-```
-
-# p-value
-```{r}
-table1 <- coef(summary(model1))
-p1 <- pnorm(abs(table1[, "t value"]), lower.tail = FALSE) * 2
-(table1 <- cbind(table1, "p value" = p1))
-```
-
-
-```{r}
 table2 <- coef(summary(model2))
 p2 <- pnorm(abs(table2[, "t value"]), lower.tail = FALSE) * 2
 (table2 <- cbind(table2, "p value" = p2))
 ```
 
+
+
+
+## model3 => indicator = r&d intensity + (patent 2018)**2
 ```{r}
+model3 <- polr(indicator ~ RD_intensity + (patents_2018)**2, data = final_filtered_data, Hess=TRUE)
+
+summary(model3)
 table3 <- coef(summary(model3))
 p3 <- pnorm(abs(table3[, "t value"]), lower.tail = FALSE) * 2
 (table3 <- cbind(table3, "p value" = p3))
 ```
-
+## model4 => indicator = r&d intensity * patent
 ```{r}
+model4 <- polr(indicator ~ RD_intensity * patents_2018, data = final_filtered_data, Hess=TRUE)
+
+summary(model4)
 table4 <- coef(summary(model4))
 p4 <- pnorm(abs(table4[, "t value"]), lower.tail = FALSE) * 2
 (table4 <- cbind(table4, "p value" = p4))
 ```
+
 
 # chi-square test
 
@@ -281,6 +273,7 @@ The dataset used for this project consist of
 # models
 
 ```{r}
-stargazer(final_filtered_data, type = "html")
+stargazer(excel, type = "html", nobs = FALSE, mean.sd = TRUE, median = TRUE,
+          iqr = TRUE)
 ```
 
