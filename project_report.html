@@ -170,8 +170,14 @@ pre code {
 </div>
 
 
-<div id="data" class="section level1">
-<h1>Data</h1>
+<div id="introduction" class="section level2">
+<h2>introduction</h2>
+</div>
+<div id="literature-review" class="section level2">
+<h2>literature review</h2>
+</div>
+<div id="data" class="section level2">
+<h2>Data</h2>
 <div id="data-collection" class="section level3">
 <h3>Data collection</h3>
 <p>For the purpose of our project, we decided to use the <a href="https://github.com/warint/iriR">isiR package</a>, which is a package available in R, as our primary database. The isiR package provide the ranking of the top innovative companies, according to the European Commission’s Industrial R&amp;D Investment Scoreboard, in addition to other dimensions. Those dimension include:Country, Year, Company’s name, Industry and Indicator. The indicator variable provides information such as sales, number of employees, profits, R&amp;D spending and more. The secondary source used for data was from IPO’s report on the <a href="https://ipo.org/wp-content/uploads/2019/07/Final_2018-Top-300.pdf">Top 300 Organizations Granted U.S Patent in 2018</a>.</p>
@@ -198,18 +204,18 @@ pre code {
 <p>Using the mutate function, we gave the outcome of <strong>Top 10</strong> the value of 2, <strong>Top 20</strong> the value of 1 and <strong>Top 30</strong> the value of 0. This was a necessary step because it would help RStudio to directly know the right ordering (2 &gt; 1 &gt; 0) when creating the models. To create the ordinal regression models, we used the <strong>polr</strong> function from the MASS package.</p>
 <p>our initial, thinking was to create 4 different model with the hope to capture any effects that may affect the dependent variable.Model 1 is a simple ordinal regression where: <span class="math inline">\(P(indicator)= \beta_0 + \beta_1.R&amp;D intensity+\beta_2.patent\)</span> The second and third model were to test for quadratic effect on each independent variables individually as show in the following formulas: <span class="math inline">\(P(indicator_i)= \beta_0 + \beta_1.(R&amp;D intesity)^2+\alpha_2.(patents)\)</span> and <span class="math inline">\(P(indicator_i)= \beta_0 + \beta_1.(R&amp;D intensity)+\beta_2.(patents)^2\)</span>. For our final model, we wanted to test if there were any interaction effect and avoid multicollinearity: <span class="math inline">\(P(indicator_i)= \beta_0 + \beta_1.(R&amp;D intensity)+\beta_2.(patents)+\beta_3.(R&amp;D intensity x patents)\)</span></p>
 </div>
-<div id="comparing-models" class="section level3">
-<h3>Comparing models</h3>
-</div>
-</div>
-<div id="result" class="section level1">
-<h1>Result</h1>
+<div id="result" class="section level2">
+<h2>Result</h2>
 <p>Since we are comparing non-nested models, we would use the AIC to determine which of the four model is the best for our research question. model 1, 2 and 3 have the same AIC of <strong>67.8637</strong> while model 4 has a AIC of <strong>69.85396</strong>. When comparing AIC, the model with the lowest number is considered the “best” model. In our case, we have 3 “best” models; model 1, model 2 and model 3. Since all 3 models are identical, it was decided to count them as one.</p>
 <p>Model 1 was taken as the best model. In order to interpret the result in a way that answer our question, we took the exponential of the coefficients of model 1. BY doing so, we would get the <strong>odd</strong> of the one of the outcome for a change in one of the independent variable. As a result we can conclude the following statements:</p>
 <ul>
 <li>For every one unit increase in R&amp;D intensity, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 0.94 times, holding constant all other variables.</li>
 <li>For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 2.06 times, holding constant all other variables.</li>
 </ul>
+</div>
+<div id="conclusion" class="section level2">
+<h2>conclusion</h2>
+</div>
 </div>
 
 
