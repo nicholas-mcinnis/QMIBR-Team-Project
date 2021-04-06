@@ -31,7 +31,7 @@ Once both datasets were completed, we combined them into a finish dataset. We th
 ![](./variables.png){width=60%}
 
 ### Data analysis and visualization
-Before starting the models, we decided to conduct some data analysis and data visualization, which may help understand our dataset better. As shown in figure 1, 15 out of the top 30 are located in North America, 1o in Europe and only 5 in Asia. 
+Before starting the models, we decided to conduct some data analysis and data visualization, which may help understand our dataset better. As shown in figure 1, 15 out of the top 30 are located in North America, 1o in Europe and only 5 in Asia. Then, we made another second histogram using the country code to have a better visualization represented by figure 2.    
 
 *Fig.1 Histogram for geographical location*
 
@@ -43,7 +43,7 @@ Before starting the models, we decided to conduct some data analysis and data vi
 
 ![](./code.png){width=60%}
 
-Using the function summary, in R, we were able to get the statistical description of both independent variables.
+Using the function summary, in R, we were able to get the statistical description of both independent variables. As show in figure 3, R&D intensity has a min of 3.47 and a max of 27.77. Its first and third quartiles are 7.08 and 17.19. Lastly its mean is 13.11 while the median is 13.31. For number of patents granted, the min and max are 0.134 and 5.836 respectively. The first and third quartiles are 0.7415 and 2.126. the mean of paten is 1.5258, while the median is 1.526.
 
 
 *Fig.3 Statistical Description of the Independent Variables*
