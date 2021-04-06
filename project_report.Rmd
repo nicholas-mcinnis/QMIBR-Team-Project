@@ -61,12 +61,18 @@ Since our depend variable only has 3 possible outcomes, we can conclude that a l
 Using the mutate function, we gave the outcome of **Top 10** the value of 2, **Top 20** the value of 1 and **Top 30** the value of 0. This was a necessary step because it would help RStudio to directly know the right ordering (2 > 1 > 0) when creating the models.
 To create the ordinal regression models, we used the **polr** function from the MASS package. 
 
-our initial, thinking was to create 4 different model with the hope to capture any effects that may affect the dependent variable.Model 1 is a simple ordinal regression where: 
-$P(indicator)= \beta_0 + \beta_1.R&D intensity+\beta_2.patent$
-The second and third model were to test for quadratic effect on each independent variables individually as show in the following formulas: $P(indicator_i)= \beta_0 + \beta_1.(R&D intesity)^2+\alpha_2.(patents)$ 
-and 
-$P(indicator_i)= \beta_0 + \beta_1.(R&D intensity)+\beta_2.(patents)^2$.
-For our final model, we wanted to test if there were any interaction effect and avoid multicollinearity: $P(indicator_i)= \beta_0 + \beta_1.(R&D intensity)+\beta_2.(patents)+\beta_3.(R&D intensity x patents)$ 
+our initial, thinking was to create 4 different model with the hope to capture any effects that may affect the dependent variable.Model 1 is a simple ordinal regression. The second and third model were to test for quadratic effect on each independent variables individually.For our final model, we wanted to test if there were any interaction effect and avoid multicollinearity.
+
+* Model 1: $logit(P(indicator_i))=\beta_0+\beta_1.RD+\beta_2.patent$
+
+* Model 2: $logit(P(indicator_i))=\beta_0+\beta_1.(RD)^2+\beta_2.patents$
+
+* Model 3: $logit(P(indicator_i))=\beta_0+\beta_1.RD+\beta_2.(patents)^2$
+
+* Model 4: $logit(P(indicator_i))=\beta_0+\beta_1.RD+\beta_2.patents+\beta_3.(RD.patents)$
+
+
+
  
 
 ## Result
