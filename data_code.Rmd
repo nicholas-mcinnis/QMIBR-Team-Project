@@ -88,11 +88,11 @@ hist(final_filtered_data$patents_2018)
 
 # data visualization: 
 ```{r}
-ggplot(data = final_filtered_data, aes(x = country_name, fill = country_name)) + 
+ggplot(data = final_filtered_data, aes(x = country_code, fill = country_code)) + 
   geom_bar() +
   xlab("") +
   ylab("Number of company in the top 30")  +
-  labs(fill = "country code")  +  
+  labs(fill = "County code")  +  
   theme_minimal() + 
   scale_fill_brewer(direction = 1)
 ```

@@ -32,11 +32,21 @@ Once both datasets were completed, we combined them into a finish dataset. We th
 
 ### Data analysis and visualization
 Before starting the models, we decided to conduct some data analysis and data visualization, which may help understand our dataset better. As shown in figure 1, 15 out of the top 30 are located in North America, 1o in Europe and only 5 in Asia. 
-**histograms**
 
+*Fig.1 Histogram for geographical location*
+
+
+![](./geo.loc.png){width=60%}
+
+*Fig.2 Histogram for country code*
+
+
+![](./code.png){width=60%}
 
 Using the function summary, in R, we were able to get the statistical description of both independent variables.
 
+
+*Fig.3 Statistical Description of the Independent Variables*
 
 ![](./statisticalDes.png){width=60%}
 
