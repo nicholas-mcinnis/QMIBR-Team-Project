@@ -87,7 +87,7 @@ Using the function summary, in R, we were able to get the statistical descriptio
 Since our depend variable only has 3 possible outcomes, we can conclude that a logistical regression would be the best than a linear regression to use. Additionally, outcomes are in a ordinal formation, Top 10 is better than Top 20 which in turn is better than Top 30. This ordinal formation narrows down our model options to an ordinal logistical regression.
 
   In an ordinal logistical regression, the output is the **Odds** of the a giving possible outcome as demonstrate in the following formula: 
- $$logit(P(Y<i))= \beta_0 + \beta_1.x_1+\beta_2.x_2+\beta_3.x_3+\epsilon$$
+ $$logit(P(Y<i))= \beta_0 - \beta_1.x_1-\beta_2.x_2-\beta_3.x_3-\epsilon$$
   
 ### Models creation
 Using the mutate function, we gave the outcome of **Top 10** the value of 2, **Top 20** the value of 1 and **Top 30** the value of 0. This was a necessary step because it would help RStudio to directly know the right ordering (2 > 1 > 0) when creating the models.
@@ -95,13 +95,13 @@ To create the ordinal regression models, we used the **polr** function from the 
 
 our initial, thinking was to create 4 different model with the hope to capture any effects that may affect the dependent variable.Model 1 is a simple ordinal regression. The second and third model were to test for quadratic effect on each independent variables individually.For our final model, we wanted to test if there were any interaction effect and avoid multicollinearity.
 
-* Model 1: $logit(P(indicator))=\beta_0+\beta_1.RD+\beta_2.patent$
+* Model 1: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.patent$
 
-* Model 2: $logit(P(indicator))=\beta_0+\beta_1.(RD)^2+\beta_2.patents$
+* Model 2: $logit(P(indicator))=\beta_0-\beta_1.(RD)^2-\beta_2.patents$
 
-* Model 3: $logit(P(indicator))=\beta_0+\beta_1.RD+\beta_2.(patents)^2$
+* Model 3: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.(patents)^2$
 
-* Model 4: $logit(P(indicator))=\beta_0+\beta_1.RD+\beta_2.patents+\beta_3.(RD.patents)$
+* Model 4: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.patents-\beta_3.(RD.patents)$
 
 
 
