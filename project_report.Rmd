@@ -109,8 +109,8 @@ our initial, thinking was to create 4 different model with the hope to capture a
 
 ## Result
 After run all model in Rstudio
-* Model 1: 
 
+![](./models.png){width=60%}
 
 Since we are comparing non-nested models, we would use the AIC to determine which of the four model is the best for our research question. Model 1, 2 and 3 have the same AIC of **67.8637** while model 4 has a AIC of **69.85396**. When comparing AIC, the model with the lowest number is considered the "best" model. In our case, we have 3 "best" models; model 1, model 2 and model 3. Since all 3 models are identical, it was decided to count them as one. 
 
