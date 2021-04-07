@@ -95,24 +95,28 @@ To create the ordinal regression models, we used the **polr** function from the 
 
 our initial, thinking was to create 4 different model with the hope to capture any effects that may affect the dependent variable.Model 1 is a simple ordinal regression. The second and third model were to test for quadratic effect on each independent variables individually.For our final model, we wanted to test if there were any interaction effect and avoid multicollinearity.
 
-* Model 1: $logit(P(indicator_i))=\beta_0+\beta_1.RD+\beta_2.patent$
+* Model 1: $logit(P(indicator))=\beta_0+\beta_1.RD+\beta_2.patent$
 
-* Model 2: $logit(P(indicator_i))=\beta_0+\beta_1.(RD)^2+\beta_2.patents$
+* Model 2: $logit(P(indicator))=\beta_0+\beta_1.(RD)^2+\beta_2.patents$
 
-* Model 3: $logit(P(indicator_i))=\beta_0+\beta_1.RD+\beta_2.(patents)^2$
+* Model 3: $logit(P(indicator))=\beta_0+\beta_1.RD+\beta_2.(patents)^2$
 
-* Model 4: $logit(P(indicator_i))=\beta_0+\beta_1.RD+\beta_2.patents+\beta_3.(RD.patents)$
+* Model 4: $logit(P(indicator))=\beta_0+\beta_1.RD+\beta_2.patents+\beta_3.(RD.patents)$
 
 
 
  
 
 ## Result
-Since we are comparing non-nested models, we would use the AIC to determine which of the four model is the best for our research question. model 1, 2 and 3 have the same AIC of **67.8637** while model 4 has a AIC of **69.85396**. When comparing AIC, the model with the lowest number is considered the "best" model. In our case, we have 3 "best" models; model 1, model 2 and model 3. Since all 3 models are identical, it was decided to count them as one. 
+After run all model in Rstudio
+* Model 1: 
+
+
+Since we are comparing non-nested models, we would use the AIC to determine which of the four model is the best for our research question. Model 1, 2 and 3 have the same AIC of **67.8637** while model 4 has a AIC of **69.85396**. When comparing AIC, the model with the lowest number is considered the "best" model. In our case, we have 3 "best" models; model 1, model 2 and model 3. Since all 3 models are identical, it was decided to count them as one. 
 
 Model 1 was taken as the best model. In order to interpret the result in a way that answer our question, we took the exponential of the coefficients of model 1. BY doing so, we would get the **odd** of the one of the outcome for a change in one of the independent variable. As a result we can conclude the following statements:
 
-* For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied 0.94 times, holding constant all other variables.
+* For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied 0.06 (1-0.94)times, holding constant all other variables.
 * For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 2.06 times, holding constant all other variables.
  
  
