@@ -132,7 +132,6 @@ summary(model1)
 table1 <- coef(summary(model1))
 p1 <- pnorm(abs(table1[, "t value"]), lower.tail = FALSE) * 2
 (table1 <- cbind(table1, "p value" = p1))
-
 ```
 ## model2 => indicator = (r&d intensity)**2 + patent 2018
 ```{r}
