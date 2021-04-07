@@ -1,21 +1,53 @@
 ---
 title: "What is the Impact of number of patents granted in the U.S. and R&D intensity on the ranking of the Top 30 innovative comapnies"
 output: html_document
-author: (name)
+author: by Aïchata Kone, Keila Baesso, & Nicholas McInnis
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-## introduction
+## Introduction
 
 
 
-## literature review
+## Literature review
+ 
+The body of literature identifies several metrics to measure innovation within companies. However, these metrics are only proxies, and do not fully capture in an exhaustive manor the true essence of innovation. Hence, different metrics capture different aspects of innovation and the literature offers confounding results as to which metrics are most effective for measuring innovation and ranking firms in terms of innovation.
+ 
+### Conventional Metrics
+ 
+#### *R&D and patents*
+ 
+Historically, the most common metrics for innovation have been research and development (R&D) and patents. Early on, R&D spending proved ineffective as a metric "after showing year over year that there [was] no statistically significant relationship between R&D spending and financial performance" (strategy&; as cited by ICSB, p.1, 2015). As a result, R&D intensity (i.e. firm R&D expenditures divided by sales) and patents are currently more widely used as proxies for innovation (Ferreira, 2010; Gallego-Alvarez, 2011; as cited by ICSB, p.1, 2015; CFO Innovation Asia, p.1, 2018).
+ 
+However, studies present contradicting results on the impact of R&D on innovation. A study by Baumann and Kritikos found that "predicted R&D intensity is positively correlated with the probability of reporting innovations" (Baumann & Kritikos, p.1, 2016). They also found that R&D intensity is higher for smaller firms, thus raising their probability of reporting innovation (Baumann & Kritikos, p.1, 2016). In contrast, research conducted by the Internal Council for Small Businesses found a negative correlation betwen R&D intensity and innovation ranking, and warned of the potential pitfalls of continuing to use this metric, along with patents, as proxies for innovation (ICSB, p.4, 2015).
+ 
+As regards patents, contradicting results were also found. In a recent study, Esteves & Feldmann found a negative correlation between innovation and patents, "in other words, one may conclude that patents are not the most relevant indicator linked with the development of innovation" (Esteves & Feldmann, p.63, 2016). Research by the ICSB support this by also finding little to negative correlation between patents and innovation (ICSB, p.1, 2015). These findings contradict conventional wisdom---that patents represent innovation---and allude to the two-sided nature of patents: On one side, patents demonstrate that firms have developed new products or services through innovation. On the other hand, once patents are filed, patent-holding firms are temporarily protected from competition and therefore no longer have an incentive to innovate thereafter, which would explain the negative correlation with innovation, and a decline in innovation rankings.
 
-
-
-## Data
+### Emerging metrics
+ 
+#### *Surveys*
+ 
+In response to the contradicting results from studies on R&D intensity and patents, *strategy&*, a management consulting company, implemented a new innovation system based "not on any proxy metric, but rather based on a subjective study of the Global Innovation 1000 survey respondents to name the top-10 companies they thought were the world's most innovative (strategy&, 2015; as cited by ICSB, p.1, 2015). This method aims to avoid the pitfalls of conventional innovation proxies, proxies which fail to capture the true essence of innovation. This new method also favors the use of qualitative rather than quantitative measurements, relying on the judgement of individuals.
+ 
+#### *Market cap*
+ 
+The literature has also identified market capitalization as an emerging and insightful metric for measuring innovation and determining a firm's position on innovation rankings. Results from the ICSB study describe a strong correlation between the innovation ranking of companies and their 4-year percent change in market capitalization (ICSB, p.1, 2015). The study posits that these findings support the view that "the market rewards true innovation" (ICSB, p.3, 2015). This view is supported by Dyer and Gregersen (2015), who posit that "companies are ranked by their innovation premium: the difference between their market capitalization and a net present value of cash flows from existing businesses". However, it should be stated that this ranking only considered companies from industries with sizeable investments in R&D (Dyer & Gregersen, 2015). This would suggest that R&D should represent a consideration for innovations rather than a metric.
+ 
+#### *Serving end users with innovations & other metrics*
+ 
+In addition, research by Belkhir & Mathew (p.269, 2018) has identified "serving end-user needs with service innovations" as a superior metric to R&D intensity and patents. These findings also rest on the notion that the innovation rankings of firms are based less on the magnitude of innovation, as measured by R&D figures, but rather by business performance on complex product & service offerings (Belkhir & Mathew, p.283, 2018). Other compelling metrics for innovation rankings recommended by the ICSB are the number of ideas submitted by employees and the percentage of sales coming form products developed in the last year (ICSB, p.1, 2015). The former alludes to human capital as being an internal source for innovation where diverse employees with innovative ideas can lead to firm innovation.
+ 
+## Selection of Variables
+ 
+ 
+ 
+## Research question
+ 
+ 
+ 
+## Methodology: Data & Modeling
 
 ### Data collection
 For the purpose of our project, we decided to use the [iriR package](https://iri.jrc.ec.europa.eu/sites/default/files/2019-12/SB2019_Final_18Dec2019_0.pdf), which is a package available in R, as our primary database. The iriR package provide the ranking of the top innovative companies, according to the European Commission’s Industrial R&D Investment Scoreboard, in addition to other dimensions. Those dimension include:Country, Year, Company’s name, Industry and Indicator. The indicator variable provides information such as sales, number of employees, profits, R&D spending and more. The secondary source used for data was from IPO's report on the [Top 300 Organizations Granted U.S Patent in 2018](https://ipo.org/wp-content/uploads/2019/07/Final_2018-Top-300.pdf).
@@ -82,7 +114,50 @@ Model 1 was taken as the best model. In order to interpret the result in a way t
 
 * For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied 0.94 times, holding constant all other variables.
 * For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 2.06 times, holding constant all other variables.
+ 
+ 
+## Discussion
+ 
+type here
+ 
+ 
+## Limitations & further research
+ 
+ 
+ 
+ 
+## Conclusion
+ 
+type here
+ 
+ 
 
-## conclusion
+## References
+
+### References for literature review
+ 
+Baumann, J. & Kritikos, A. (February, 2016). The Link between R&D, Innovation and Productivity: Are Micro Firms Different? *The Institute for the Study of Labour (IZA)*, 1-44. Retrieved from: [http://ftp.iza.org/dp9734.pdf](http://ftp.iza.org/dp9734.pdf)
+ 
+Belkhir, L., & Mathew, M. (August 15, 2018). A case study of global agency innovation rankings: Impact on current definitions of innovation. *Problems and Perspectives in Management, 16*(3), 269-283. Retrieved from: [https://orcid.org/0000-0001-6852-2065](https://orcid.org/0000-0001-6852-2065)
+ 
+CFO Innovation Asia. (2018). Singapore Rated No. 3 in Innovation Ranking; Hong Kong is No. 37. *CFO Innovation Asia*, 1. Retrieved from: [https://login.proxy2.hec.ca/login?qurl=http%3a%2f%2fsearch.proquest.com%2f%3faccountid%3d11357](https://login.proxy2.hec.ca/login?qurl=http%3a%2f%2fsearch.proquest.com%2f%3faccountid%3d11357)
+ 
+Dyer, J., & Gregersen, H. (August 19, 2015). How We Rank The World's Most Innovative Companies. *Forbes*. Retrieved from: [https://www.forbes.com/sites/innovatorsdna/2015/08/19/how-we-rank-the-worlds-most-innovative-companies-2015/?sh=1311e4b95f8c](https://www.forbes.com/sites/innovatorsdna/2015/08/19/how-we-rank-the-worlds-most-innovative-companies-2015/?sh=1311e4b95f8c)
+ 
+Esteves F.P., K., & Feldmann. (2016). Why Brazil doesn't innovate: A comparison among nations. *RAI: Revista de Administração e Inovação, 13*(1). 63-82. Retrived from: [https://login.proxy2.hec.ca/login?qurl=https://search.proquest.com%2fabicomplete%2fdocview%2f1786297793%2f6B2B3DBED8894C31PQ%2f1%3faccountid%3d11357](https://login.proxy2.hec.ca/login?qurl=https://search.proquest.com%2fabicomplete%2fdocview%2f1786297793%2f6B2B3DBED8894C31PQ%2f1%3faccountid%3d11357)
+ 
+ICSB World Conference Proceedings. (2015). What Are the Metrics of Innovation? *International Council for Small Business (ICSB)*, 1-5. Retrieved from: [https://login.proxy2.hec.ca/login?qurl=https://search.proquest.com%2fabicomplete%2fdocview%2f1826918581%2f7EDBB232EDEF47A9PQ%2f1%3faccountid%3d11357](https://login.proxy2.hec.ca/login?qurl=https://search.proquest.com%2fabicomplete%2fdocview%2f1826918581%2f7EDBB232EDEF47A9PQ%2f1%3faccountid%3d11357)
+ 
 
 
+  
+ 
+### References for methodology
+ 
+
+ 
+### References for discussion
+ 
+
+
+ 
