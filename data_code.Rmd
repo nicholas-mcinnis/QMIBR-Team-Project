@@ -133,6 +133,15 @@ table1 <- coef(summary(model1))
 p1 <- pnorm(abs(table1[, "t value"]), lower.tail = FALSE) * 2
 (table1 <- cbind(table1, "p value" = p1))
 ```
+ 
+```{r}
+# (Nic) trying to find residuals, using source, but it gives me "NULL"
+# Source: https://rdrr.io/rforge/regr0/man/residuals.polr.html
+model1.resid <- residuals(model1)
+head(model1.resid)
+summary(model1.resid)
+```
+ 
 ## model2 => indicator = (r&d intensity)**2 + patent 2018
 ```{r}
 model2 <- polr(indicator ~ (RD_intensity)**2 + patents_2018, data = final_filtered_data, Hess=TRUE)
