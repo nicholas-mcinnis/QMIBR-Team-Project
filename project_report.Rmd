@@ -39,12 +39,35 @@ The literature has also identified market capitalization as an emerging and insi
  
 In addition, research by Belkhir & Mathew (p.269, 2018) has identified "serving end-user needs with service innovations" as a superior metric to R&D intensity and patents. These findings also rest on the notion that the innovation rankings of firms are based less on the magnitude of innovation, as measured by R&D figures, but rather by business performance on complex product & service offerings (Belkhir & Mathew, p.283, 2018). Other compelling metrics for innovation rankings recommended by the ICSB are the number of ideas submitted by employees and the percentage of sales coming form products developed in the last year (ICSB, p.1, 2015). The former alludes to human capital as being an internal source for innovation where diverse employees with innovative ideas can lead to firm innovation.
  
+ 
 ## Selection of Variables
  
+As mentioned, the purpose of this research is to better understand which factors lead to innovation and the rise in a company's innovation ranking by using quantitative methods. Rather than exploring many variables with little depth, this study will focus on a few variables to be explored in greater depth with the aim of providing a more thorough evaluation of said variables and a greater understanding of innovation rankings through these variables. Hence the study will focus on only two variables, selected from the metrics identified in the literature review and available in the initial dataset we collected.
+ 
+As stated, the literature has shown that *market cap* is positively correlated with innovation and researchers posit that "the market rewards true innovation" (ICSB, p.1, 2015). However, we disagree in part with this claim for several reasons. Firstly, history has shown that companies, such as oil companies and banks, can perform well and be rewarded on the stock market without truly innovating (market cap attributed to oligopoly or monopoly power). Secondly, the change in market cap is also heavily influenced by changes in the market concentration of a company's industry, supply and demand for the company's stock, accounting returns, investor sentiment and behavioural aspects, economic conditions and the overall performance of market indices, to name a few. It is also very difficult to control for all of these variables and be left with the effect of innovation alone.
+ 
+Futhermore, market cap may also be subject to multicollinearity, where a firm might have a higher market cap because of the number of patents it holds. This multicollinearity would make it nearly impossible to compare the significance of market cap and patents on innovation respectively, since the effect of patents is would be present in market cap. In short, market cap is a complex metric that involved many sub-dimensions and thus will not be the focus of this study.
+
+As regards *serving end-users with service innovations*, this variable is also difficult to measure. This metric can be interpreted as being highly dependent on the position of the firm's activities in the value chain (upstream or downstream) rather than the firm's contribution of added value towards a final product. For example, an upstream firm providing innovative value-added to a final product may not be considered innovative under this metric because they are not positioned to directly serve the end user. In addition, this metric is difficult to qualtify, and would be more suitable for research using a quantitative-qualitative approach.
+
+As regards *R&D intensity* and *patents*, these metrics have recieved mixed results in the literature. Although some sources undermine the importance of these metrics, they were still incorporated in their studies, which indicates that these metrics do have some relevance among critics. Furthermore, it would be very insightful to engage in the debate about the relevance of these metrics by evaluating their impact on firms' innovation rankings using more recent data. In addition, both these metrics are easily quantifiable and would be well suited for quantitative research methods.
  
  
 ## Research question
  
+Based on the variables identified in the literature review, R&D intensity and patents have been selected as independent variables. Our research will investigate the following research question: *What is the impact of the number of patents granted in the U.S. and R&D intensity on the ranking of the top 30 innovative companies*
+ 
+  
+## Conceptual framework
+ 
+In line with the research question, a conceptual framework was developed to visualize the array of variables linked to innovation rankings and describes our decision process for selecting variables.
+ 
+*insert pic here*
+```{r}
+![](./conceptualFramework.jpg)
+```
+ 
+This conceptual framework displays the variables we have identified from the literature review and the variables from our initial datasets. Of these variables, the two most relevant variables were selected: R&D intensity in 2019 and patents in the US in 2018. Justifications were given for why other variables were not selected for the models in our research, or why they would be more suitable for further research.
  
  
 ## Methodology: Data & Modeling
