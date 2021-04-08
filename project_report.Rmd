@@ -178,6 +178,10 @@ Model 1 was taken as the best model. In order to interpret the result in a way t
 type here
  
  
+*Table 5. keila's table (give it a title)*
+
+![](./countrynumb.png){width=60%}
+ 
 ## Limitations & further research
  
  
