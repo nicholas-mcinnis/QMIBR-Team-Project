@@ -61,7 +61,9 @@ Based on the variables identified in the literature review, R&D intensity and pa
 ## Conceptual framework
  
 In line with the research question, a conceptual framework was developed to visualize the array of variables linked to innovation rankings and describes our decision process for selecting variables:
- 
+
+
+![](./cf_copy3.png){width=60%}
 
 This conceptual framework displays the variables we have identified from the literature review and the variables from our initial datasets. Of these variables, the two most relevant variables were selected: R&D intensity in 2019 and patents in the US in 2018. Justifications were given for why other variables were not selected for the models in our research, or why they would be more suitable for further research.
  
