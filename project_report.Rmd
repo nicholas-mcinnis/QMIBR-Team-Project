@@ -182,13 +182,75 @@ Model 1 was taken as the best model. In order to interpret the result in a way t
  
 ## Discussion
  
-type here
+
+<div style="text-align: justify">
+Based on our findings of the number of patents and the R&D impact in the ranking of most innovative companies, we have run a research to understand the state of art of the initiatives that could foment innovation and help the countries push up their companies on this list. To collect the best insights to achieve this goal we reviewed the literature in a qualitative analysis. Our findings show as the main important constructs to be considered: The Triple Helix Theory, Diversity incentive, and Open Innovation adoption. These constructs are discussed below.
+
+**Triple Helix Theory**
+
+First, according to the Triple Helix theory, which refers to the university–industry–government triad, the interaction between these parties is at the core of innovation and growth in increasingly knowledge-based societies. (Etzkowitz 2003) states that the constant flow of human capital in the academy generates a regular refreshment of ideas, while industry remains the crucial actor of production, and the government ensures the stable and formal relationships between them. These relations span networks that enable and constrain fluxes of communication (Leydesdorff and Meyer 2003). The Triple Helix also denotes a transformation in these circles (Etzkowitz and Leydesdorff 2000), with the university shifting from a pure teaching association into a teaching and research facility. 
+
+According to (Leydesdorff and Etzkowitz 2001), the Triple Helix is a result of various concurrent developments:
+1.	The interconnection between the laboratory of knowledge-production and research users, at various levels, exemplified by the rapid growth of industry-university centers in which firms and academic researchers jointly set priorities; technology transfer agencies within both universities and firms that negotiate with each other and move technologies in both directions;
+2.	The emergence, spread and convergence of technological and communications paradigms such as the computer, mobile telephony, and the Internet; interaction itself has become more extensive among organizations, multi-layered, and therefore relatively more important than the elaboration of perspectives within the walls of one’s own institution based on routines and tacit knowledge;
+3.	The consequent transition from vertical to lateral and multi-media coordination networks, and the pressure to shrink bureaucratic layers.
+
+According to (Doblinger, Surana et al. 2019), the patenting activity of cleantech start-ups increased by 73.7 percent with every additional governmental technology alliance when compared to those start-ups that did not engage in such alliances. Findings from (Jugend, Jabbour et al. 2018) demonstrate that government support has clear effect on innovation. It shows the positive influence of state policies on how firms collaborate and co-create within a sector, as well as the role of state financial and non-monetary support in improving innovative performance among firms. 
+
+Permanent increases in government spending, aimed at strategic industries and based on the promotion of innovation and mission-driven innovation policies, have the greatest impact on productivity and investment growth (Deleidi and Mazzucato 2021). Such public policies generate the largest supermultiplier and the largest impact on private investment by directly stimulating private sector expenditure in R&D. 
+
+A example of the governmental impact in innovation could be concluded in our study that shows the US leading the statistics by a large margin (see table 5). Some authors attribute this to state innovation initiatives, namely the Small Business Innovation Research (SBIR) program, which catalyzed a series of cross-cutting institutional mechanisms that supported the growth of small, innovative technology businesses. (Keller and Block 2013) (Doblinger, Surana et al. 2019).
  
  
-*Table 5. keila's table (give it a title)*
+*Table 5. Countries Raking in number of innovative companies *
 
 ![](./countrynumb.png){width=60%}
  
+ (Liotard and Revest 2018) study positive impacts that US federal agency contests on economic dynamics and
+social dynamics. In their study the authors suggest five scenarios to describe how public decision-makers can use innovation competitions to stimulate co-creation: i) Sponsoring collaborations between various innovative players; ii) Facilitating the creation of new companies by favourable fiscal arrangements in the case of starts-up and jobs creation. iii) Increase the demand on specific markets (several criteria may be combined to meet this goal); iv) Educate citizens toward new behaviours, practices, conceptions (for instance in order to better protect the environment, to fight against inequalities, discrimination etc); v) Play a certification role toward industrial or investors to advertise the quality of the project/team and promote partnerships. 
+
+Social impact was also identified as an important innovation tendency in the recent contests sponsored either by the X Prize Foundation or US federal agencies to give more weight to social aims and combine technological and social objectives (Liotard and Revest 2018). This constitutes a significant shift from the “old contests” of the 18th and 19th centuries, for example, which focused almost exclusively on technological matters. Furthermore, the future social component of contests is a significant distinction between contests and patents, which are by their very nature committed to technical advancement. The following possible positive results have been highlighted: i) contests represent a motivating force to engage in innovative activities, even with non-monetary rewards; ii) contests may lead to non-conventional and interdisciplinary research teams that otherwise would never have emerged; iii) contests may stimulate interactions and synergies among participants during the innovation process itself, enhancing the collective dimension of the innovation process; iv) contests are proving stimulating for firms' entry, raising money from the private sector, and in some cases, for job creation; v) contests undoubtedly contribute to spreading social improvements, notably through awareness and education and vi) contests are well designed to support both technological and social advances/ breakthroughs.
+
+
+**Diversity and Innovation**
+
+Second, gender diversity also plays an important role on innovation. A study of manufacturing firms in a coastal province of China from 2009 to 2013 found that gender diversity in R&D teams enhances innovation efficiency throughout the innovation process, by promoting high-quality innovations due to the various perspectives and experiences that women contribute, and also via generating social benefits that help in enhancing intra and inter-team communication. (Xie, Zhou et al. 2020)
+
+Two studies highlighted by (Fechner and Shapanka 2018) also brings important findings to this topic: i) eliminating the patenting gap of female holders of science and engineering degrees would increase gross domestic product (GDP) per capita by 2.7%; ii) including more women and African Americans in the initial stage of the innovation process would increase GDP between 0.64 and 3.3% per capita.
+
+**Open innovation initiatives**
+
+Historically, firms had their own in-house R&D departments to develop and commercialize new products, a paradigm known as “closed innovation”(Lee, Hwang et al. 2012), with no involvement of university, government or third parties in the process. Open Innovation (OI) represents a shift from that old industry practice, driven by the new increasing opportunities to collaborate with external partners and individuals to find new innovative ideas. Some countries such as the USA, Australia and Singapore established open innovation policies at the national level to leverage an innovation culture.
+
+According to (Greco, Locatelli et al. 2017), one key element to leverage innovation is the cooperation between universities and firms. Academia is a major player in the Open Innovation perspective, and this relationship can be positively influenced by the Government by implementing appropriate policies, such as the US legislation Bayh-Dole Act, also known as Patent and Trademark Law Amendments Act (1980), that handle inventions arising from federal government-funded research.
+
+(Lee, Hwang et al. 2012) examine the current open innovation practices in the public sector of leading countries and presents some examples of government-led open innovation initiatives:  
+
+Open Innovation in the US:  
+•	Peer-to-Patent project enables the public to engage in the patent review process and links patent examiners with volunteer scientists via the internet.  
+
+•	NYC BigApps, a software application developer contest for solving various problems: NYC BigApps is the flagship civic innovation challenge in New York City for designers, developers, academics, entrepreneurs, and New Yorkers at large to apply their know-how to improve the Big Apple (3).  
+
+•	USAID Development 2.0 Challenge: “USAID is the lead U.S. Government agency that works to end extreme global poverty and enable resilient, democratic societies to realize their potential” (1). “The Development 2.0 Challenge is a open initiative that invites people from around the world to submit ideas for solving a development challenge identified by the United States Agency for International Development (USAID). USAID’s Development 2.0 Challenge is a new way for the U.S. Government to identify compelling projects and ideas being developed around the world, to bring attention and support to the best, and to enable great innovators to collaborate with each other.” (2).  
+
+•	Innovation Inducement Prizes: “As one of their measures to promote innovation, governments and private parties have periodically awarded prizes not only for recognizing original technical achievements but also for solutions to predefined scientific or technological problems or demonstrations of the feasibility of specified unprecedented accomplishments.” (4)  
+
+•	Bright Tomorrow Lighting Prize: “The Bright Tomorrow Lighting Prize competition drives game-changing innovation to accelerate America’s shift from inefficient, dated lighting technology to innovative, high-performance lighting solutions.” (5)  
+
+Example of government-led open innovation initiatives in Canada:  
+
+•	Toronto Transit Camp, a one-day collaborative problem-solving event organised by the Toronto Transit Commission (TTC)  
+
+
+Examples of open innovation in Australia:  
+•	Golden Gurus, a national volunteer mentoring program, aiming to provide mature age Australians with several opportunities to support community organisations or start-up businesses.   
+
+Example of government-led open innovation initiatives in UK:  
+•	Big Green Challenge, a competition designed to encourage people to find responses to climate change and develop ideas for reducing carbon emission. 
+
+In the final analysis, not enough metrics were available to measure the relation between some of the constructs. Further research is still needed to define clear indicators of company diversity and degree of open innovation. With solid definitions on these metrics, it would be possible to check the impact of these initiatives on the innovative companies ranking.
+
+
 ## Limitations & further research
  
  
@@ -237,5 +299,86 @@ Mcleod, S. (2019, May 20). P-values and statistical significance. SimplySpycholo
 ### References for discussion
  
 
+Bai, J. and J. Li (2011). "Regional innovation efficiency in China: The role of local government." Innovation 13(2): 142-153.  
+
+Deleidi, M. and M. Mazzucato (2021). "Directed innovation policies and the supermultiplier: An empirical assessment of mission-oriented policies in the US economy." Research policy 50(2): 104151.
+
+Doblinger, C., et al. (2019). "Governments as partners: The role of alliances in US cleantech startup innovation." Research policy 48(6): 1458-1475.
+
+
+
+Etzkowitz, H. (2003). "Innovation in innovation: The triple helix of university-industry-government relations." Social science information 42(3): 293-337.
+
+
+
+Etzkowitz, H. and L. Leydesdorff (2000). "The dynamics of innovation: from National Systems and “Mode 2” to a Triple Helix of university–industry–government relations." Research policy 29(2): 109-123.
+
+
+
+Fechner, H. and M. S. Shapanka (2018). "Closing diversity gaps in innovation: Gender, race, and income disparities in patenting and commercialization of inventions." Technology & Innovation 19(4): 727-734.
+
+
+
+Greco, M., et al. (2017). "Open innovation in the power & energy sector: Bringing together government policies, companies’ interests, and academic essence." Energy Policy 104: 316-324.
+
+
+
+Hong, J., et al. (2016). "Do government grants promote innovation efficiency in China's high-tech industries?" Technovation 57: 4-13.
+
+
+
+Hou, B., et al. (2019). "Academia-industry collaboration, government funding and innovation efficiency in Chinese industrial enterprises." Technology Analysis & Strategic Management 31(6): 692-706.
+
+
+
+Huang, Q., et al. (2016). "Effect of government subsidization on Chinese industrial firms’ technological innovation efficiency: A stochastic frontier analysis." Journal of Business Economics and Management 17(2): 187-200.
+
+
+
+Jiao, H., et al. (2015). "Legal environment, government effectiveness and firms' innovation in China: examining the moderating influence of government ownership." Technological Forecasting and Social Change 96: 15-24.
+
+
+
+Jugend, D., et al. (2018). "Relationships among open innovation, innovative performance, government support and firm size: Comparing Brazilian firms embracing different levels of radicalism in innovation." Technovation 74: 54-65.
+
+
+
+Keller, M. R. and F. Block (2013). "Explaining the transformation in the US innovation system: the impact of a small government program." Socio-Economic Review 11(4): 629-656.
+
+
+
+Lee, S. M., et al. (2012). "Open innovation in the public sector of leading countries." Management Decision.
+
+
+
+Leydesdorff, L. and H. Etzkowitz (2001). "The transformation of university-industry-government relations."
+
+
+
+Leydesdorff, L. and M. Meyer (2003). "The Triple Helix of university-industry-government relations." Scientometrics 58(2): 191-203.
+
+
+
+Lin, B. and R. Luan (2020). "Are government subsidies effective in improving innovation efficiency? Based on the research of China's wind power industry." Science of The Total Environment 710: 136339.
+
+
+
+Liotard, I. and V. Revest (2018). "Contests as innovation policy instruments: Lessons from the US federal agencies' experience." Technological Forecasting and Social Change 127: 57-69.
+
+
+
+Xie, L., et al. (2020). "Gender diversity in R&D teams and innovation efficiency: Role of the innovation context." Research policy 49(1): 103885.
+
+(1) https://2012-2017.usaid.gov/, accessed on April 7 in 2021.
+
+(2)	https://obamawhitehouse.archives.gov/open/innovations/Development-2-point-0-Challenge/, accessed on April 7 in 2021.
+
+(3)	https://www.bigapps.nyc/, accessed on April 7 in 2021.
+
+(4)	https://www.nap.edu/read/11816/chapter/2#2, accessed on April 7 in 2021.
+
+(5)	https://www.energy.gov/eere/ssl/l-prize-competition, accessed on April 7 in 2021.
+
+</div>
 
  
