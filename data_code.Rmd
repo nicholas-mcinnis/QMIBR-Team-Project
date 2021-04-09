@@ -67,6 +67,9 @@ final_filtered_data <- final_filtered_data %>% mutate(indicator = case_when(indi
 
 final_filtered_data$indicator <- as.ordered(final_filtered_data$indicator)
 
+Keila_data <- filter(final_data,year==2019)
+
+
 
 
 ```
@@ -87,6 +90,23 @@ hist(final_filtered_data$patents_2018)
 
 
 # data visualization: 
+
+
+```{r}
+table_keila <- table(Keila_data$country_code,Keila_data$year)
+
+table_keila
+```
+
+```{r}
+ggplot(data = Keila_data, aes(x = country_code, fill = country_code)) + 
+  geom_bar() +
+  xlab("") +
+  ylab("Number of company")  +
+  labs(fill = "County code")  +  
+  theme_minimal()
+```
+
 ```{r}
 ggplot(data = final_filtered_data, aes(x = country_code, fill = country_code)) + 
   geom_bar() +
