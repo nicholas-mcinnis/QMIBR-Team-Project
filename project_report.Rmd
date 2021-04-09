@@ -1,0 +1,241 @@
+---
+title: "What is the Impact of number of patents granted in the U.S. and R&D intensity on the ranking of the Top 30 innovative comapnies"
+output: html_document
+author: by Aïchata Koné, Keila Baesso, & Nicholas McInnis
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Introduction
+
+
+
+## Literature review
+ 
+The body of literature identifies several metrics to measure innovation within companies. However, these metrics are only proxies, and do not fully capture in an exhaustive manor the true essence of innovation. Hence, different metrics capture different aspects of innovation and the literature offers confounding results as to which metrics are most effective for measuring innovation and ranking firms in terms of innovation.
+ 
+### Conventional Metrics
+ 
+#### *R&D and patents*
+ 
+Historically, the most common metrics for innovation have been research and development (R&D) and patents. Early on, R&D spending proved ineffective as a metric "after showing year over year that there [was] no statistically significant relationship between R&D spending and financial performance" (strategy&; as cited by ICSB, p.1, 2015). As a result, R&D intensity (i.e. firm R&D expenditures divided by sales) and patents are currently more widely used as proxies for innovation (Ferreira, 2010; Gallego-Alvarez, 2011; as cited by ICSB, p.1, 2015; CFO Innovation Asia, p.1, 2018).
+ 
+However, studies present contradicting results on the impact of R&D on innovation. A study by Baumann and Kritikos found that "predicted R&D intensity is positively correlated with the probability of reporting innovations" (Baumann & Kritikos, p.1, 2016). They also found that R&D intensity is higher for smaller firms, thus raising their probability of reporting innovation (Baumann & Kritikos, p.1, 2016). In contrast, research conducted by the Internal Council for Small Businesses found a negative correlation betwen R&D intensity and innovation ranking, and warned of the potential pitfalls of continuing to use this metric, along with patents, as proxies for innovation (ICSB, p.4, 2015).
+ 
+As regards patents, contradicting results were also found. In a recent study, Esteves & Feldmann found a negative correlation between innovation and patents, "in other words, one may conclude that patents are not the most relevant indicator linked with the development of innovation" (Esteves & Feldmann, p.63, 2016). Research by the ICSB support this by also finding little to negative correlation between patents and innovation (ICSB, p.1, 2015). These findings contradict conventional wisdom---that patents represent innovation---and allude to the two-sided nature of patents: On one side, patents demonstrate that firms have developed new products or services through innovation. On the other hand, once patents are filed, patent-holding firms are temporarily protected from competition and therefore no longer have an incentive to innovate thereafter, which would explain the negative correlation with innovation, and a decline in innovation rankings.
+
+### Emerging metrics
+ 
+#### *Surveys*
+ 
+In response to the contradicting results from studies on R&D intensity and patents, *strategy&*, a management consulting company, implemented a new innovation system based "not on any proxy metric, but rather based on a subjective study of the Global Innovation 1000 survey respondents to name the top-10 companies they thought were the world's most innovative (strategy&, 2015; as cited by ICSB, p.1, 2015). This method aims to avoid the pitfalls of conventional innovation proxies, proxies which fail to capture the true essence of innovation. This new method also favors the use of qualitative rather than quantitative measurements, relying on the judgement of individuals.
+ 
+#### *Market cap*
+ 
+The literature has also identified market capitalization as an emerging and insightful metric for measuring innovation and determining a firm's position on innovation rankings. Results from the ICSB study describe a strong correlation between the innovation ranking of companies and their 4-year percent change in market capitalization (ICSB, p.1, 2015). The study posits that these findings support the view that "the market rewards true innovation" (ICSB, p.3, 2015). This view is supported by Dyer and Gregersen (2015), who posit that "companies are ranked by their innovation premium: the difference between their market capitalization and a net present value of cash flows from existing businesses". However, it should be stated that this ranking only considered companies from industries with sizeable investments in R&D (Dyer & Gregersen, 2015). This would suggest that R&D should represent a consideration for innovations rather than a metric.
+ 
+#### *Serving end users with innovations & other metrics*
+ 
+In addition, research by Belkhir & Mathew (p.269, 2018) has identified "serving end-user needs with service innovations" as a superior metric to R&D intensity and patents. These findings also rest on the notion that the innovation rankings of firms are based less on the magnitude of innovation, as measured by R&D figures, but rather by business performance on complex product & service offerings (Belkhir & Mathew, p.283, 2018). Other compelling metrics for innovation rankings recommended by the ICSB are the number of ideas submitted by employees and the percentage of sales coming form products developed in the last year (ICSB, p.1, 2015). The former alludes to human capital as being an internal source for innovation where diverse employees with innovative ideas can lead to firm innovation.
+ 
+ 
+## Selection of Variables
+ 
+As mentioned, the purpose of this research is to better understand which factors lead to innovation and the rise in a company's innovation ranking by using quantitative methods. Rather than exploring many variables with little depth, this study will focus on a few variables to be explored in greater depth with the aim of providing a more thorough evaluation of said variables and a greater understanding of innovation rankings through these variables. Hence the study will focus on only two variables, selected from the metrics identified in the literature review and available in the initial dataset we collected.
+ 
+As stated, the literature has shown that *market cap* is positively correlated with innovation and researchers posit that "the market rewards true innovation" (ICSB, p.1, 2015). However, we disagree in part with this claim for several reasons. Firstly, history has shown that companies, such as oil companies and banks, can perform well and be rewarded on the stock market without truly innovating (market cap attributed to oligopoly or monopoly power). Secondly, the change in market cap is also heavily influenced by changes in the market concentration of a company's industry, supply and demand for the company's stock, accounting returns, investor sentiment and behavioural aspects, economic conditions and the overall performance of market indices, to name a few. It is also very difficult to control for all of these variables and be left with the effect of innovation alone.
+ 
+Futhermore, market cap may also be subject to multicollinearity, where a firm might have a higher market cap because of the number of patents it holds. This multicollinearity would make it nearly impossible to compare the significance of market cap and patents on innovation respectively, since the effect of patents is would be present in market cap. In short, market cap is a complex metric that involved many sub-dimensions and thus will not be the focus of this study.
+
+As regards *serving end-users with service innovations*, this variable is also difficult to measure. This metric can be interpreted as being highly dependent on the position of the firm's activities in the value chain (upstream or downstream) rather than the firm's contribution of added value towards a final product. For example, an upstream firm providing innovative value-added to a final product may not be considered innovative under this metric because they are not positioned to directly serve the end user. In addition, this metric is difficult to qualtify, and would be more suitable for research using a quantitative-qualitative approach.
+
+As regards *R&D intensity* and *patents*, these metrics have recieved mixed results in the literature. Although some sources undermine the importance of these metrics, they were still incorporated in their studies, which indicates that these metrics do have some relevance among critics. Furthermore, it would be very insightful to engage in the debate about the relevance of these metrics by evaluating their impact on firms' innovation rankings using more recent data. In addition, both these metrics are easily quantifiable and would be well suited for quantitative research methods.
+ 
+ 
+## Research question
+ 
+Based on the variables identified in the literature review, R&D intensity and patents have been selected as independent variables. Our research will investigate the following research question: *What is the impact of the number of patents granted in the U.S. and R&D intensity on the ranking of the top 30 innovative companies*
+ 
+  
+## Conceptual framework
+ 
+In line with the research question, a conceptual framework was developed to visualize the array of variables linked to innovation rankings and describes our decision process for selecting variables:
+<<<<<<< HEAD
+
+
+![](./cf_copy3.png){width=60%}
+
+=======
+ 
+ 
+>>>>>>> cdfd2c73b694a251b544918cec26ac80540c48c8
+This conceptual framework displays the variables we have identified from the literature review and the variables from our initial datasets. Of these variables, the two most relevant variables were selected: R&D intensity in 2019 and patents in the US in 2018. Justifications were given for why other variables were not selected for the models in our research, or why they would be more suitable for further research.
+ 
+ 
+## Methodology: Data & Modeling
+
+### Data collection
+
+For the purpose of our project, we decided to use the [iriR package](https://iri.jrc.ec.europa.eu/sites/default/files/2019-12/SB2019_Final_18Dec2019_0.pdf), which is a package available in R, as our primary database. The iriR package provide the ranking of the top innovative companies, according to the European Commission’s Industrial R&D Investment Scoreboard, in addition to other dimensions. Those dimension include:Country, Year, Company’s name, Industry and Indicator. The indicator variable provides information such as sales, number of employees, profits, R&D spending and more. The secondary source used for data was from IPO's report on the [Top 300 Organizations Granted U.S Patent in 2018](https://ipo.org/wp-content/uploads/2019/07/Final_2018-Top-300.pdf), which is based on the data provided by the [U.S Patent and Trademark Office](https://www.uspto.gov). We chose U.S patent and trademark office data since it is part of one the five most important patent office in the world. Additionally, the U.S market is considered an attractive market for many companies and it was easier to find data for the number of patent for the U.S than for other countries.  
+
+### Dataset processing
+
+Since our project required very specific variable, it was necessary to perform some data processing before thinking of building models. Starting with the iriR database. The first step was to create a dataset in R using the iriR package with Rank, company's name, industry, year and R&D intensity as variable. It was decided as a group to limit our dataset to 30 observations. Therefore, the filter function, from the dplyr package, was used to limit the rank variable to 30 and make the year equal to 2019. This filtering helps us identify for which company the number of patent granted is need. With this thought in mind, and second dataset was created in R with company's name and patent as variables. Unfortunately, we were not able to find the number of patents granted in 2018 for 7  of the companies. In order to fill those missing data, we took the mean of the remaining 23 companies patents, the the entire row was divided by a 1000 for modeling purposes.
+
+
+Once both datasets were completed, we combined them into a finish dataset. We then add two more variables named indicator and geographical location. The indicator variable only has 3 element; Top 10 for the company ranking between 1 and 10, Top 20 for those between 10 and 20 and finally Top 30 for the remaining companies.the geographical location categories companies into 3 location,Asia, Europe and North America, depending on their country code. With the final variables, our finished dataset has in total 11 variables; Rank in 2019, Company's name, Country code, Industry, R&D intensity, number of patent granted in 2018 and indicator as demonstrate in the table above. For this project indicator was determined as the dependent variable. Since the purpose of this project is to access whether R&D intensity and number of patents have a impact to the ranking, our models would mainly focus on those two as the sole independent variables. *(refer to table 1)*
+
+
+*Table 1. Description of the Variables used in the project*
+
+![](./variable.png){width=60%}
+
+### Data analysis and visualization
+
+Before starting the models, we decided to conduct some data analysis and data visualization, which may help understand our dataset better. As shown in figure 1, 15 out of the top 30 are located in North America, 10 in Europe and only 5 in Asia. Then, we made another second histogram using the country code to have a better visualization represented by figure 2. All of the 15 companies located in NoRth America are U.S companies. The european companies are divided between France, Germany and Switzerland. Germany has the majority of the european companies, followed Switzerland then France. As for the Asian companies, they are divided between China, Korea and Japan. China and Japan have equal number of companies in the top 30, while Korea is slightly behind.  
+
+*Fig.1 Histogram for geographical location*
+
+![](./geo.loc.png){width=60%}
+
+*Fig.2 Histogram for country code*
+
+![](./code.png){width=60%}
+
+Using the function summary, in R, we were able to get the statistical description of both independent variables. As show in figure 3, R&D intensity has a min of 3.47 and a max of 27.77. Its first and third quartiles are 7.08 and 17.19. Lastly its mean is 13.11 while the median is 13.31. For number of patents granted, the min and max are 0.134 and 5.836 respectively. The first and third quartiles are 0.7415 and 2.126. The mean of patent is 1.5258, while the median is 1.526.
+
+
+*Fig.3 Statistical Description of the Independent Variables*
+
+![](./statisticalDes.png){width=60%}
+
+### Modeling
+
+Since our depend variable only has 3 possible outcomes, we can conclude that a logistical regression would be the best than a linear regression to use. Additionally, outcomes are in a ordinal formation, Top 10 is better than Top 20 which in turn is better than Top 30. This ordinal formation narrows down our model options to an ordinal logistical regression.
+
+  In an ordinal logistical regression, the output is the **Odds** of the a giving possible outcome as demonstrate in the following formula: 
+ $$logit(P(Y<i))= \beta_0 - \beta_1.x_1-\beta_2.x_2-\beta_3.x_3-\epsilon$$
+  
+### Models creation
+
+Using the mutate function, we gave the outcome of **Top 10** the value of 2, **Top 20** the value of 1 and **Top 30** the value of 0. This was a necessary step because it would help RStudio to directly know the right ordering (2 > 1 > 0) when creating the models.
+To create the ordinal regression models, we used the **polr** function from the MASS package. 
+
+our initial, thinking was to create 4 different model with the hope to capture any effects that may affect the dependent variable.Model 1 is a simple ordinal regression. The second and third model were to test for quadratic effect on each independent variables individually.For our final model, we wanted to test if there were any interaction effect and avoid multicollinearity.
+
+* Model 1: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.patent$
+
+* Model 2: $logit(P(indicator))=\beta_0-\beta_1.(RD)^2-\beta_2.patents$
+
+* Model 3: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.(patents)^2$
+
+* Model 4: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.patents-\beta_3.(RD.patents)$
+
+
+## Model interpretetion, Significance and Results
+
+### Interpretetion
+
+After run all model in Rstudio using the appropriate function, we get the following result, represented by table 2. With this table, we can then write the estimate functions for each of the four models. In ordinal regression, there are multiple estimate function for the dependent variable due to the different categories of the dependent variable. In our case, we have 2 estimate function for each models.
+
+The estimates function for model 1 is the following: (Y = 2 for "Top 10", 1 for "Top 20" and 0 for "Top 30"):
+
+* $P(Y<1)=-0.2799-(-0.05697).RD-0.72495.patents$ 
+
+* $P(Y<2)=1.167-(-0.05697).RD-0.72495.patents$
+
+The estimates function for model 4 is the following: (Y = 2 for "Top 10", 1 for "Top 20" and 0 for "Top 30"):
+
+* $P(Y<1)=-0.4325-(-0.069308).RD-0.63663.patents-0.007523(RD.patents)$
+
+* $P(Y<2)=1.0157-(-0.069308).RD-0.63663.patents-0.007523(RD.patents)$
+
+
+*Table 2. Models Estimates*
+
+![](./models.png){width=60%}
+
+### Significance
+
+In addition to the estimates of the models, we also wanted to find the p-value of the independent variables in order to test for significance at 95% confident level. Table 3 is a representation of the estimates, standard errors, t-values and most importantly the p-values for model 1,2 and 3.Using the p-value table, we were able to determined that R&D intensity is relatively high and is not significant when p=0.05 and p=0.1. As for the patent variable, it is not significant when p=0.05 but is significant when p=0.10.
+
+*Table 3. P-Values for model 1, 2 and 3*
+
+![](./m1.png){width=60%}
+
+Table 4 is a representation of the estimates, standard errors, t-values and most importantly the p-values for model 4. For model 4, R&D intensity is also high and is neither significant at 95% and 90% confident level. Patent is not significant at 95% confidence level but is significant at 90%. Lastly, the interaction variable is also not significant at 95% and at 90% confident level.
+
+*Table 4. P-Values for model 4*
+
+![](./m4.png){width=60%}
+
+### Results
+
+Since we are comparing non-nested models, we would use the AIC to determine which of the four model is the best for our research question. Model 1, 2 and 3 have the same AIC of **67.8637** while model 4 has a AIC of **69.85396**. When comparing AIC, the model with the lowest number is considered the "best" model. In our case, we have 3 "best" models; model 1, model 2 and model 3. Since all 3 models are identical, it was decided to count them as one. 
+
+Model 1 was taken as the best model. In order to interpret the result in a way that answer our question, we took the exponential of the coefficients of model 1. BY doing so, we would get the **odd** of the one of the outcome for a change in one of the independent variable. As a result we can conclude the following statements:
+
+* For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied **0.06** (1-0.94)times, holding constant all other variables.
+* For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied **2.06** times, holding constant all other variables.
+ 
+ 
+## Discussion
+ 
+type here
+ 
+ 
+*Table 5. keila's table (give it a title)*
+
+![](./countrynumb.png){width=60%}
+ 
+## Limitations & further research
+ 
+ 
+ 
+ 
+## Conclusion
+ 
+type here
+ 
+ 
+
+## References
+
+### References for literature review
+ 
+Baumann, J. & Kritikos, A. (February, 2016). The Link between R&D, Innovation and Productivity: Are Micro Firms Different? *The Institute for the Study of Labour (IZA)*, 1-44. Retrieved from: [http://ftp.iza.org/dp9734.pdf](http://ftp.iza.org/dp9734.pdf)
+ 
+Belkhir, L., & Mathew, M. (August 15, 2018). A case study of global agency innovation rankings: Impact on current definitions of innovation. *Problems and Perspectives in Management, 16*(3), 269-283. Retrieved from: [https://orcid.org/0000-0001-6852-2065](https://orcid.org/0000-0001-6852-2065)
+ 
+CFO Innovation Asia. (2018). Singapore Rated No. 3 in Innovation Ranking; Hong Kong is No. 37. *CFO Innovation Asia*, 1. Retrieved from: [https://login.proxy2.hec.ca/login?qurl=http%3a%2f%2fsearch.proquest.com%2f%3faccountid%3d11357](https://login.proxy2.hec.ca/login?qurl=http%3a%2f%2fsearch.proquest.com%2f%3faccountid%3d11357)
+ 
+Dyer, J., & Gregersen, H. (August 19, 2015). How We Rank The World's Most Innovative Companies. *Forbes*. Retrieved from: [https://www.forbes.com/sites/innovatorsdna/2015/08/19/how-we-rank-the-worlds-most-innovative-companies-2015/?sh=1311e4b95f8c](https://www.forbes.com/sites/innovatorsdna/2015/08/19/how-we-rank-the-worlds-most-innovative-companies-2015/?sh=1311e4b95f8c)
+ 
+Esteves F.P., K., & Feldmann. (2016). Why Brazil doesn't innovate: A comparison among nations. *RAI: Revista de Administração e Inovação, 13*(1). 63-82. Retrived from: [https://login.proxy2.hec.ca/login?qurl=https://search.proquest.com%2fabicomplete%2fdocview%2f1786297793%2f6B2B3DBED8894C31PQ%2f1%3faccountid%3d11357](https://login.proxy2.hec.ca/login?qurl=https://search.proquest.com%2fabicomplete%2fdocview%2f1786297793%2f6B2B3DBED8894C31PQ%2f1%3faccountid%3d11357)
+ 
+ICSB World Conference Proceedings. (2015). What Are the Metrics of Innovation? *International Council for Small Business (ICSB)*, 1-5. Retrieved from: [https://login.proxy2.hec.ca/login?qurl=https://search.proquest.com%2fabicomplete%2fdocview%2f1826918581%2f7EDBB232EDEF47A9PQ%2f1%3faccountid%3d11357](https://login.proxy2.hec.ca/login?qurl=https://search.proquest.com%2fabicomplete%2fdocview%2f1826918581%2f7EDBB232EDEF47A9PQ%2f1%3faccountid%3d11357)
+ 
+
+
+  
+ 
+### References for methodology
+
+Ordinal Logistic Regression | R Data Analysis Examples. (n.d.-b). UCLA. Retrieved from: https://stats.idre.ucla.edu/r/dae/ordinal-logistic-regression/
+
+IPO. (2019, July 2). Top 300 Organizations Granted U.S. Patents in 2018. Retrieved from: https://ipo.org/wp-content/uploads/2019/07/Final_2018-Top-300.pdf
+
+HOME | IRI. (n.d.). IRI. Retrieved from: https://iri.jrc.ec.europa.eu/home/
+
+W. (2020, November 10). warint/iriR. GitHub.Retrieved from: https://github.com/warint/iriR
+
+Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani (2013) “An Introduction to Statistical Learning” Springer. Retrieved from: https://warin.ca/ressources/books/2013_Book_AnIntroductionToStatisticalLea.pdf
+
+Mcleod, S. (2019, May 20). P-values and statistical significance. SimplySpychology. Retrieved from:https://www.simplypsychology.org/p-value.html
+
+### References for discussion
+ 
+
+
+ 
