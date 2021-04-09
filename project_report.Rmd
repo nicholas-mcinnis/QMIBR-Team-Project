@@ -176,8 +176,8 @@ Since we are comparing non-nested models, we would use the AIC to determine whic
 
 Model 1 was taken as the best model. In order to interpret the result in a way that answer our question, we took the exponential of the coefficients of model 1. BY doing so, we would get the **odd** of the one of the outcome for a change in one of the independent variable. As a result we can conclude the following statements:
 
-* For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied 0.06 (1-0.94)times, holding constant all other variables.
-* For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied 2.06 times, holding constant all other variables.
+* For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied **0.06** (1-0.94)times, holding constant all other variables.
+* For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied **2.06** times, holding constant all other variables.
  
  
 ## Discussion
