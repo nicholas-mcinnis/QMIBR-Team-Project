@@ -2,7 +2,11 @@
 title: "Project Slides"
 author: "by Aïchata Koné, Keila Baesso, & Nicholas McInnis"
 date: '2021-04-09'
-output: beamer_presentation
+output:
+  beamer_presentation:
+    theme: "default"
+    colortheme: "dove"
+    fonttheme: "structurebold"
 ---
 
 ```{r setup, include=FALSE}
@@ -11,21 +15,53 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## R Markdown
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- Introduction
+- Research Question 
+- Varibles
+- Results
+- Discussion
+- Conclusion
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
-## Slide with Bullets
+## Introduction
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+![](./cf_copy3.png)
 
-## Slide with R Output
+## Research Question
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
+"What is the Impact of number of patents granted in the U.S. and R&D intensity on the ranking of the Top 30 innovative companies"
+
+## variables
+
+![](./variable.png){width=60%}
+
+
+## Models
+
+- In an ordinal logistical regression, the output is the **Odds** of the a giving possible outcome as demonstrate in the following formula: 
+ $$logit(P(Y<i))= \beta_0 - \beta_1.x_1-\beta_2.x_2-\beta_3.x_3-\epsilon$$
+
+- final_filtered_data <- final_filtered_data %>% mutate(indicator = case_when(indicator == "top 10" ~ 2, indicator == "top 20" ~ 1, TRUE ~ 0))
+
+## Models
+
+- Model 1: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.patent$
+- Model 2: $logit(P(indicator))=\beta_0-\beta_1.(RD)^2-\beta_2.patents$
+- Model 3: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.(patents)^2$
+- Model 4: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.patents-\beta_3.(RD.patents)$
+
+## R result
+
+![](./models.png)
+
+## Interpretation 
+Since model 1,2 & 3, AIC score is lower than model 4's (**67.8637** < **69.85396**), therefore any of the first 3 model can be consider as the "best" model
+
+**With this knowledge, the following statements can be made:**
+
+- For every one unit increase in R&D intensity, the odds of being in the upper rank  (top 10 or top 20  versus top 30) is multiplied **0.06** (1-0.94)times, holding constant all other variables.
+
+- For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied **2.06** times, holding constant all other variables.
 
 ## Slide with Plot
 

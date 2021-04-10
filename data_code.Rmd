@@ -43,13 +43,6 @@ data_test2$RD_intensity <- data_test2$value
 data_test2$indicator_code <- NULL
 data_test2$value <- NULL
 
-
-data_test3 <- irir_data(indicators = "capex.intensity")
-data_test3$capex_intensity <- data_test3$value
-
-
-data_test2$capex_intensity <- data_test3$capex_intensity
-
 excel <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1LvrUVtUihRWMHgDqLAJHVm7_VeAqWBEZ7d1I3nAwD8U/edit?usp=sharing")
 
 ```
