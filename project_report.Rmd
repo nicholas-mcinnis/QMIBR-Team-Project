@@ -259,7 +259,18 @@ type here
  
 ## Limitations & further research
  
+### Limitations
+
 type here
+- Only assessed 30 companies
+- Trasferability to different geographies? given that half of all firms are in the U.S
+- Trasferability to SMEs? since companies in sample are very large
+ 
+### Futher research
+
+- Include more variables for measuring innovation in models
+- Develop metrics for assessing the impact of open innovation on innovation ranking
+- Develop metrics that capture diversity initiatives and the Triple Helix Theory
  
  
  
