@@ -17,8 +17,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Introduction
 - Research Question 
-- Varibles
-- Model
+- Variables
+- Models
 - Discussion
 - Conclusion
 
@@ -87,4 +87,5 @@ Studies have shown that:
 **Open Innovation adoption**
 
 - OI represents a shift from that old industry practice, driven by the new increasing opportunities to collaborate with external partners and individuals to find new innovative ideas. Some countries such as the USA, Australia and Singapore established open innovation policies at the national level to leverage an innovation culture.
+
 

@@ -184,7 +184,6 @@ Model 1 was taken as the best model. In order to interpret the results in a way 
  
 ## Discussion
  
-<div style="text-align: justify">
 To complement our findings on the impact of number of patents and the R&D intensity on the ranking of most innovative companies, we conducted additional research to understand the state of art of the initiatives that could foment innovation and help the countries push up their companies up this list. To collect the best insights to achieve this goal we reviewed the literature in a qualitative analysis. Our findings identify the main important constructs to be considered: The Triple Helix Theory, Diversity incentive, and Open Innovation adoption. These constructs are discussed below.
 
 **Triple Helix Theory**
