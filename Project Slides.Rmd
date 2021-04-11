@@ -18,32 +18,34 @@ knitr::opts_chunk$set(echo = FALSE)
 - Introduction
 - Research Question 
 - Varibles
-- Results
+- Model
 - Discussion
 - Conclusion
 
 
 ## Introduction
-
-![](./cf_copy3.png)
+During the literature review, we identifies several metrics to measure innovation within companies:
+- Conventional Metrics: Patent and R&D
+- Emerging metrics: Survey, Market cap and Serving end users with innovations & other metrics
 
 ## Research Question
 
 "What is the Impact of number of patents granted in the U.S. and R&D intensity on the ranking of the Top 30 innovative companies"
 
+## Conceptual framework
+![](./cf_copy3.png)
+
 ## variables
 
-![](./variable.png){width=60%}
+![](./variable.png){width=100%}
 
 
 ## Models
 
-- In an ordinal logistical regression, the output is the **Odds** of the a giving possible outcome as demonstrate in the following formula: 
- $$logit(P(Y<i))= \beta_0 - \beta_1.x_1-\beta_2.x_2-\beta_3.x_3-\epsilon$$
-
-- final_filtered_data <- final_filtered_data %>% mutate(indicator = case_when(indicator == "top 10" ~ 2, indicator == "top 20" ~ 1, TRUE ~ 0))
-
-## Models
+In an ordinal logistical regression, the output is the **Odds** of the a giving possible outcome as demonstrate in the following formula: 
+ $$logit(P(Y<i))= \beta_0 - \beta_1.x_1-\beta_2.x_2-\beta_3.x_3-\epsilon$
+ 
+Checking for quadratic effect and interraction in variables:
 
 - Model 1: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.patent$
 - Model 2: $logit(P(indicator))=\beta_0-\beta_1.(RD)^2-\beta_2.patents$
@@ -63,9 +65,26 @@ Since model 1,2 & 3, AIC score is lower than model 4's (**67.8637** < **69.85396
 
 - For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied **2.06** times, holding constant all other variables.
 
-## Slide with Plot
+## Discussion
 
-```{r pressure}
-plot(pressure)
-```
+- In addition to our reseach question, we have run a research to understand the state of art of the initiatives that could foment innovation and help the countries push up their companies on this list. 
+
+- Our findings show as the main important constructs to be considered: The Triple Helix Theory, Diversity incentive, and Open Innovation adoption
+
+##
+
+**The Triple Helix Theory**
+
+##
+**Diversity incentive**
+Studies have shown that: 
+
+- eliminating the patenting gap of female holders of science and engineering degrees would increase gross domestic product (GDP) per capita by 2.7%
+
+- including more women and African Americans in the initial stage of the innovation process would increase GDP between 0.64 and 3.3% per capita
+
+##
+**Open Innovation adoption**
+
+- OI represents a shift from that old industry practice, driven by the new increasing opportunities to collaborate with external partners and individuals to find new innovative ideas. Some countries such as the USA, Australia and Singapore established open innovation policies at the national level to leverage an innovation culture.
 

@@ -7,7 +7,9 @@ author: by Aïchata Koné, Keila Baesso, & Nicholas McInnis
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+<div style="text-align: justify">
 ## Introduction
+
 
 
 
