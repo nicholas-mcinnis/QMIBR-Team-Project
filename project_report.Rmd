@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <div style="text-align: justify">
 ## Introduction
  
-
+Since early industrialization, it remains a known fact that innovation serves as a driver for long term economic growth and development. Modern history has been marked by the groundbreaking innovations, such as the internet, the smartphone, genetically modified organisms, and many more, most of which were brought forth by the private sector. Although there is much consensus on the impact that these innovations have on the economy, there little consensus as regards the factors that lead to innovation, or the metrics by which innovation should be measured. Consequentially, this debate extends to the variables that explain how companies are ranked on global innovation rankings, as understanding these metric can reveal the factors within companies that foster innovation. Our research aims provide clarity to this debate and better understand the metrics that lead to innovation and firms' positions on innovation rankings.
  
  
  
@@ -57,9 +57,11 @@ As regards *serving end-users with service innovations*, this variable is also d
 As regards *R&D intensity* and *patents*, these metrics have recieved mixed results in the literature. Although some sources undermine the importance of these metrics, they were still incorporated in their studies, which indicates that these metrics do have some relevance among critics. Furthermore, it would be very insightful to engage in the debate about the relevance of these metrics by evaluating their impact on firms' innovation rankings using more recent data. In addition, both these metrics are easily quantifiable and would be well suited for quantitative research methods.
  
  
+ 
 ## Research question
  
 Based on the variables identified in the literature review, R&D intensity and patents have been selected as independent variables. Our research will investigate the following research question: *What is the impact of the number of patents granted in the U.S. and R&D intensity on the ranking of the top 30 innovative companies*
+ 
  
   
 ## Conceptual framework
@@ -69,6 +71,7 @@ In line with the research question, a conceptual framework was developed to visu
 ![](./cf_copy3.png){width=60%}
  
 This conceptual framework displays the variables we have identified from the literature review and the variables from our initial datasets. Of these variables, the two most relevant variables were selected: R&D intensity in 2019 and patents in the US in 2018. Justifications were given for why other variables were not selected for the models in our research, or why they would be more suitable for further research.
+ 
  
  
 ## Methodology: Data & Modeling
@@ -178,9 +181,9 @@ Model 1 was taken as the best model. In order to interpret the results in a way 
 * For every one unit increase in patent, the odds of being in the upper rank (top 10 or top 20 versus top 30) is multiplied **2.06** times, holding constant all other variables.
  
  
+ 
 ## Discussion
  
-
 <div style="text-align: justify">
 To complement our findings on the impact of number of patents and the R&D intensity on the ranking of most innovative companies, we conducted additional research to understand the state of art of the initiatives that could foment innovation and help the countries push up their companies up this list. To collect the best insights to achieve this goal we reviewed the literature in a qualitative analysis. Our findings identify the main important constructs to be considered: The Triple Helix Theory, Diversity incentive, and Open Innovation adoption. These constructs are discussed below.
 
@@ -207,14 +210,13 @@ An example of the governmental impact in innovation could be concluded in our st
 Liotard and Revest (2018) study positive impacts that US federal agency contests on economic dynamics and social dynamics. In their study the authors suggest five scenarios to describe how public decision-makers can use innovation competitions to stimulate co-creation: i) Sponsoring collaborations between various innovative players; ii) Facilitating the creation of new companies by favourable fiscal arrangements in the case of starts-up and jobs creation. iii) Increase the demand on specific markets (several criteria may be combined to meet this goal); iv) Educate citizens toward new behaviours, practices, conceptions (for instance, to better protect the environment, to fight against inequalities, discrimination, etc.); v) Play a certification role toward industrial or investors to advertise the quality of the project/team and promote partnerships.
 
 Social impact was also identified as an important innovation tendency in the recent contests sponsored by the X Prize Foundation or US federal agencies to give more weight to social aims and combine technological and social objectives (Liotard and Revest 2018). This constitutes a significant shift from the “old contests” of the 18th and 19th centuries, for example, which focused almost exclusively on technological matters. Furthermore, the future social component of contests is a significant distinction between contests and patents, which are by their very nature committed to technical advancement. The following possible positive results have been highlighted: i) contests represent a motivating force to engage in innovative activities, even with non-monetary rewards; ii) contests may lead to non-conventional and interdisciplinary research teams that otherwise would never have emerged; iii) contests may stimulate interactions and synergies among participants during the innovation process itself, enhancing the collective dimension of the innovation process; iv) contests are proving stimulating for firms' entry, raising money from the private sector, and in some cases, for job creation; v) contests undoubtedly contribute to spreading social improvements, notably through awareness and education and vi) contests are well designed to support both technological and social advances/ breakthroughs.
-
-
+ 
 **Diversity and Innovation**
 
 Second, gender diversity also plays an important role on innovation. A study of manufacturing firms in a coastal province of China from 2009 to 2013 found that gender diversity in R&D teams enhances innovation efficiency throughout the innovation process, by promoting high-quality innovations due to the various perspectives and experiences that women contribute, and also via generating social benefits that help in enhancing intra and inter-team communication. (Xie, Zhou et al. 2020)
 
 Two studies highlighted by (Fechner and Shapanka 2018) also brings important findings to this topic: i) eliminating the patenting gap of female holders of science and engineering degrees would increase gross domestic product (GDP) per capita by 2.7%; ii) including more women and African Americans in the initial stage of the innovation process would increase GDP between 0.64 and 3.3% per capita.
-
+ 
 **Open innovation initiatives**
 
 Historically, firms had their own in-house R&D departments to develop and commercialize new products, a paradigm known as “closed innovation” (Lee, Hwang et al. 2012), with no involvement of university, government or third parties in the process. Open Innovation (OI) represents a shift from that old industry practice, driven by the new increasing opportunities to collaborate with external partners and individuals to find new innovative ideas. Some countries such as the USA, Australia and Singapore established open innovation policies at the national level to leverage an innovation culture.
@@ -248,17 +250,19 @@ Example of government-led open innovation initiatives in UK:
 In the final analysis, not enough metrics were available to measure the relation between some of the constructs. Further research is still needed to define clear indicators of company diversity and degree of open innovation. With solid definitions on these metrics, it would be possible to check the impact of these initiatives on the innovative companies ranking.
  
  
+ 
 ## Conclusion
  
 type here
  
  
+ 
 ## Limitations & further research
  
+type here
  
  
  
-
 ## References
 
 ### References for literature review
