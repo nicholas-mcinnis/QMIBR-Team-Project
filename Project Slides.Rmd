@@ -1,5 +1,5 @@
 ---
-title: "Project Slides"
+title: "Measuring the impact of quantitative metrics on Global Firm Innovation Rankings: The case of R&D intensity and patents"
 author: "by Aïchata Koné, Keila Baesso, & Nicholas McInnis"
 date: '2021-04-09'
 output:
@@ -25,9 +25,16 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
 During the literature review, we identifies several metrics to measure innovation within companies:
-- Conventional Metrics: Patent and R&D
-- Emerging metrics: Survey, Market cap and Serving end users with innovations & other metrics
-
+ 
+*Conventional Metrics*:
+- Patents
+- R&D (R&D spending, R&D intensity)
+ 
+*Emerging metrics*: 
+- Subjective surveys
+- Market cap
+- Serving end users with innovations & other metrics
+ 
 ## Research Question
 
 "What is the Impact of number of patents granted in the U.S. and R&D intensity on the ranking of the Top 30 innovative companies"
