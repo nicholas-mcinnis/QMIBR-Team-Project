@@ -137,13 +137,13 @@ Our findings are a step in the right direction when answering our initial questi
 Project limitations:
 
 - Our sample size is statistically significant, but not large enough to make generalizations
-- our sample is not a accurate representation of the population since most of the companies are large and U.S firms
+- Our sample is not an accurate representation of the population since most of the companies are large and U.S firms
 
 Further research:
 
-- create models using more than two variables to explain innovation
-- use panel data to evaluate the changes in company rankings over time
-- define metric for open innovation and incorporate them to the model creation
+- Create models using more than two variables to explain innovation
+- Use panel data to evaluate the changes in company rankings over time
+- Define metrics for open innovation and incorporate them to the model creation
 
 
 
