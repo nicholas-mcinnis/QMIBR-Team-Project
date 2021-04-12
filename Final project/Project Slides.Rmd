@@ -24,6 +24,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
  
+- Innovation has for a long time been serves as a driver for long term economic growth and development. However, variables that explain how companies are ranked on global innovation rankings remain a debatable subject. 
+
+- For that reason, our research aims provide clarity to this debate and better understand the metrics that lead to innovation and firms' positions on innovation rankings.
 
 
 ## Literature
