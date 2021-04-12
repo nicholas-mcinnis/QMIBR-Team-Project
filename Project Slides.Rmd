@@ -22,17 +22,25 @@ knitr::opts_chunk$set(echo = FALSE)
 - Discussion
 - Conclusion
 
-
 ## Introduction
+ 
+
+
+## Literature
 During the literature review, we identifies several metrics to measure innovation within companies:
  
 *Conventional Metrics*:
+
 - Patents
+
 - R&D (R&D spending, R&D intensity)
  
 *Emerging metrics*: 
+
 - Subjective surveys
+
 - Market cap
+
 - Serving end users with innovations & other metrics
  
 ## Research Question
@@ -42,12 +50,12 @@ During the literature review, we identifies several metrics to measure innovatio
 ## Conceptual framework
 ![](./cf_copy3.png)
 
-## variables
+## Variables
 
 ![](./variable.png){width=100%}
 
 
-## Models
+## Models: Ordinal Logistic Regression
 
 In an ordinal logistical regression, the output is the **Odds** of the a giving possible outcome as demonstrate in the following formula: 
  $$logit(P(Y<i))= \beta_0 - \beta_1.x_1-\beta_2.x_2-\beta_3.x_3-\epsilon$
@@ -59,9 +67,24 @@ Checking for quadratic effect and interraction in variables:
 - Model 3: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.(patents)^2$
 - Model 4: $logit(P(indicator))=\beta_0-\beta_1.RD-\beta_2.patents-\beta_3.(RD.patents)$
 
-## R result
+## Results in R
 
 ![](./models.png)
+
+
+## Estimates
+
+The estimates function for model 1 is the following: (Y = 2 for "Top 10", 1 for "Top 20" and 0 for "Top 30"):
+
+- $P(Y<1)=-0.2799-(-0.05697).RD-0.72495.patents$ 
+
+- $P(Y<2)=1.167-(-0.05697).RD-0.72495.patents$
+
+The estimates function for model 4 is the following: (Y = 2 for "Top 10", 1 for "Top 20" and 0 for "Top 30"):
+
+- $P(Y<1)=-0.4325-(-0.069308).RD-0.63663.patents-0.007523(RD.patents)$
+
+- $P(Y<2)=1.0157-(-0.069308).RD-0.63663.patents-0.007523(RD.patents)$
 
 ## Interpretation 
 Since model 1,2 & 3, AIC score is lower than model 4's (**67.8637** < **69.85396**), therefore any of the first 3 model can be consider as the "best" model
@@ -82,6 +105,9 @@ Since model 1,2 & 3, AIC score is lower than model 4's (**67.8637** < **69.85396
 
 **The Triple Helix Theory**
 
+- Refers to the university–industry–government triad, the interaction between these parties is at the core of innovation and growth in increasingly knowledge-based societies
+
+
 ##
 **Diversity incentive**
 Studies have shown that: 
@@ -94,5 +120,13 @@ Studies have shown that:
 **Open Innovation adoption**
 
 - OI represents a shift from that old industry practice, driven by the new increasing opportunities to collaborate with external partners and individuals to find new innovative ideas. Some countries such as the USA, Australia and Singapore established open innovation policies at the national level to leverage an innovation culture.
+
+
+## Conclusion
+
+
+
+
+## Limitations & Further research
 
 

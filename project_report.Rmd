@@ -222,37 +222,13 @@ Historically, firms had their own in-house R&D departments to develop and commer
 
 According to Greco, Locatelli et al. (2017), one key element to leverage innovation is the cooperation between universities and firms. Academia is a major player in the Open Innovation perspective, and this relationship can be positively influenced by the Government by implementing appropriate policies, such as the US legislation Bayh-Dole Act, also known as Patent and Trademark Law Amendments Act (1980), that handle inventions arising from federal government-funded research.
 
-Lee, Hwang et al. (2012) examine the current open innovation practices in the public sector of leading countries and presents some examples of government-led open innovation initiatives:  
-
-Open Innovation in the US:  
-•	Peer-to-Patent project enables the public to engage in the patent review process and links patent examiners with volunteer scientists via the internet.  
-
-•	NYC BigApps, a software application developer contest for solving various problems: NYC BigApps is the flagship civic innovation challenge in New York City for designers, developers, academics, entrepreneurs, and New Yorkers at large to apply their know-how to improve the Big Apple (3).  
-
-•	USAID Development 2.0 Challenge: “USAID is the lead U.S. Government agency that works to end extreme global poverty and enable resilient, democratic societies to realize their potential” (1). “The Development 2.0 Challenge is a open initiative that invites people from around the world to submit ideas for solving a development challenge identified by the United States Agency for International Development (USAID). USAID’s Development 2.0 Challenge is a new way for the U.S. Government to identify compelling projects and ideas being developed around the world, to bring attention and support to the best, and to enable great innovators to collaborate with each other.” (2).  
-
-•	Innovation Inducement Prizes: “As one of their measures to promote innovation, governments and private parties have periodically awarded prizes not only for recognizing original technical achievements but also for solutions to predefined scientific or technological problems or demonstrations of the feasibility of specified unprecedented accomplishments.” (4)  
-
-•	Bright Tomorrow Lighting Prize: “The Bright Tomorrow Lighting Prize competition drives game-changing innovation to accelerate America’s shift from inefficient, dated lighting technology to innovative, high-performance lighting solutions.” (5)  
-
-Example of government-led open innovation initiatives in Canada:  
-
-•	Toronto Transit Camp, a one-day collaborative problem-solving event organised by the Toronto Transit Commission (TTC)  
-
-
-Examples of open innovation in Australia:  
-•	Golden Gurus, a national volunteer mentoring program, aiming to provide mature age Australians with several opportunities to support community organisations or start-up businesses.   
-
-Example of government-led open innovation initiatives in UK:  
-•	Big Green Challenge, a competition designed to encourage people to find responses to climate change and develop ideas for reducing carbon emission. 
-
 In the final analysis, not enough metrics were available to measure the relation between some of the constructs. Further research is still needed to define clear indicators of company diversity and degree of open innovation. With solid definitions on these metrics, it would be possible to check the impact of these initiatives on the innovative companies ranking.
  
  
  
 ## Conclusion
  
-type here
+Although our results support claims in the literature review, they do not provide a complete answer to the research question. Rather, our findings are a step in the right direction; since R&D intensity and patents represent metrics for closed innovation, this research highlights the need for metrics that measure the effect of open innovation, as well as government support and diversity initiatives. Such metrics can potentially capture the true essence of innovation and provide insights as to how firms can rise in innovation rankings and how countries can foster innovation to drive economic growth.
  
  
  
@@ -260,16 +236,12 @@ type here
  
 ### Limitations
 
-type here
-- Only assessed 30 companies
-- Trasferability to different geographies? given that half of all firms are in the U.S
-- Trasferability to SMEs? since companies in sample are very large
+Our research contains certain limitations. Although our sample size of 30 is statistically significant, it is not large enough to make generalizations. In other words, the law of large numbers doesn't apply, which explains why our p-values are not significant even at a 90% confidence level. Our research also has limited transferability to SMEs and other geographies, given that our samples involves large firms from the U.S., respectively.
  
-### Futher research
+ 
+### Further research
 
-- Include more variables for measuring innovation in models
-- Develop metrics for assessing the impact of open innovation on innovation ranking
-- Develop metrics that capture diversity initiatives and the Triple Helix Theory
+Given how innovation is very complex, further research should create models using more than two variables to explain innovation, and can also use panel data to evaluate the changes in company rankings over time. As more firms become more reliant on clusters of open innovation, current models of innovation should include metrics that effectively capture the impact of open innovation on innovation ranking. Further research should also develop metrics that capture diversity initiatives and the Triple Helix Theory. Since these concepts are difficult to quantify, such research may need a qualitative-qualitative approach.
  
  
  
@@ -345,10 +317,6 @@ Liotard, I. and V. Revest (2018). "Contests as innovation policy instruments: Le
  
 Xie, L., et al. (2020). "Gender diversity in R&D teams and innovation efficiency: Role of the innovation context." Research policy 49(1): 103885.
  
-(1) https://2012-2017.usaid.gov/, accessed on April 7 in 2021.
-(2)	https://obamawhitehouse.archives.gov/open/innovations/Development-2-point-0-Challenge/, accessed on April 7 in 2021.
-(3)	https://www.bigapps.nyc/, accessed on April 7 in 2021.
-(4)	https://www.nap.edu/read/11816/chapter/2#2, accessed on April 7 in 2021.
-(5)	https://www.energy.gov/eere/ssl/l-prize-competition, accessed on April 7 in 2021.
-
 </div>
+
+TL;DR
