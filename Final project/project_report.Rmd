@@ -1,6 +1,6 @@
 ---
 title: "What is the Impact of number of patents granted in the U.S. and R&D intensity on the ranking of the Top 30 innovative companies"
-output: html_document
+output: pdf_document
 author: by Aïchata Koné, Keila Baesso, & Nicholas McInnis
 ---
 

@@ -13,7 +13,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+## Outline
 
 - Introduction
 - Research Question 
@@ -58,7 +58,7 @@ During the literature review, we identifies several metrics to measure innovatio
 ## Models: Ordinal Logistic Regression
 
 In an ordinal logistical regression, the output is the **Odds** of the a giving possible outcome as demonstrate in the following formula: 
- $$logit(P(Y<i))= \beta_0 - \beta_1.x_1-\beta_2.x_2-\beta_3.x_3-\epsilon$
+ $$logit(P(Y<i))= \beta_0 - \beta_1.x_1-\beta_2.x_2-\beta_3.x_3-\epsilon$$
  
 Checking for quadratic effect and interraction in variables:
 
@@ -102,7 +102,6 @@ Since model 1,2 & 3, AIC score is lower than model 4's (**67.8637** < **69.85396
 - Our findings show as the main important constructs to be considered: The Triple Helix Theory, Diversity incentive, and Open Innovation adoption
 
 ##
-
 **The Triple Helix Theory**
 
 - Refers to the university–industry–government triad, the interaction between these parties is at the core of innovation and growth in increasingly knowledge-based societies
@@ -124,9 +123,24 @@ Studies have shown that:
 
 ## Conclusion
 
+Our findings are a step in the right direction when answering our initial question.
 
+- R&D intensity and patents are considered as closed innovation and this research highlights the need for metrics that measure the effect of open innovation, as well as government support and diversity initiatives.
 
+- Such metrics can potentially capture the true essence of innovation and provide insights as to how firms can rise in innovation rankings and how countries can foster innovation to drive economic growth.
 
 ## Limitations & Further research
+
+Project limitations:
+
+- Our sample size is statistically significant, but not large enough to make generalizations
+- our sample is not a accurate representation of the population since most of the companies are large and U.S firms
+
+Further research:
+
+- create models using more than two variables to explain innovation
+- use panel data to evaluate the changes in company rankings over time
+- define metric for open innovation and incorporate them to the model creation
+
 
 
