@@ -34,17 +34,17 @@ During the literature review, we identifies several metrics to measure innovatio
  
 *Conventional Metrics*:
 
-- Patents
+- Patents (Esteves & Feldmann, 2016; ICSB, 2015)
 
-- R&D (R&D spending, R&D intensity)
+- R&D (R&D spending, R&D intensity) (Baumann & Kritikos, 2016; ICSB, 2015)
  
 *Emerging metrics*: 
 
-- Subjective surveys
+- Subjective surveys (strategy&, 2015; as cited by ICSB, 2015)
 
-- Market cap
+- Market cap (ICSB, 2015; Dyer and Gregersen, 2015)
 
-- Serving end users with innovations & other metrics
+- Serving end users with innovations & other metrics (ICSB, 2015)
  
 ## Research Question
 
